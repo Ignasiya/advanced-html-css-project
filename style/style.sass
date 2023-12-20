@@ -8,9 +8,31 @@
 body
     background-color: #FFF
     font-family: 'Lato', sans-serif
+    transition: 0.2s linear
 
 a 
     text-decoration: none
+
+details
+    user-select: none
+
+summary
+    display: block
+    font-size: 14px
+    font-weight: 300
+
+summary::-webkit-details-marker
+    display: none
+
+summary::before
+    content: '\25C4'
+    display: block
+    float: right
+    transform: rotate(0deg)
+    transition: transform 0.3s ease-in-out
+    
+details[open] summary::before
+    transform: rotate(-90deg)
 
 .center
     padding-left: calc(50% - $widthSite / 2)
@@ -44,6 +66,7 @@ a
         &__title_d
             font-weight: 900
             color: #f16d7f
+            font-size: 28px
     
     &__forminput
         display: flex
@@ -52,36 +75,347 @@ a
         &__browse
             display: block
             position: relative
+            cursor: pointer
             padding: 10px
             width: 87px
             height: 38px
-            background-color: #cdcdcc
-            background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%)
+            background-color: #f9f9f9
             border: 1px solid #e6e6e6
             border-radius: 3px 0px 0px 3px
-            
-            &__text
-                display: block
-                font-size: 14px
-                font-weight: 300
-                color: #222
-            
-            &__text::-webkit-details-marker
-                display: none
-  
-            &__text::before
-                content: '\25C4'
-                display: block
-                float: right
-                color: #838383
-                transform: rotate(0deg)
-                transition: transform 0.3s ease-in-out
-            
-        &__browse[open] summary::before
-                transform: rotate(-90deg)
+            color: #838383
 
+        &__browse:hover
+            background-color: $colorBasic
+            color: #FFF
+            
         &__search
-
+            width: 279px
+            height: 38px
+            border: 1px solid #e6e6e6
+            padding-left: 16px
+            padding-right: 16px
+            font-size: 14px
+            line-height: 32px
+            font-weight: 300
+            letter-spacing: 0.025em
+            color: #a4a4a4
+            margin-left: -1px
+            margin-right: -1px
+    
         &__btn
+            background-color: #fff
+            width: 38px
+            height: 38px
+            border-radius: 0px 3px 3px 0px
+            border: 1px solid #e6e6e6
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            fill: #a4a4a4
+        
+        &__btn:hover
+            background-color: $colorBasic
+            fill: #fff
 
     &__right
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 26px
+    
+    &__cart
+        fill: #222
+    
+    &__cart:hover
+        fill: $colorBasic
+
+    &__myaccount
+        display: block
+        position: relative
+        cursor: pointer
+        width: 130px
+        height: 38px
+        background-color: $colorBasic
+        padding: 10px 15px
+        color: #FFF
+        border: 1px solid #FFF
+    
+        &__text
+            font-size: 14px
+            font-weight: 400
+            letter-spacing: 0.025em
+    
+    &__myaccount:hover
+        background-color: #FFF
+        color: $colorBasic
+        border: 1px solid $colorBasic
+
+/* раздел меню  */
+.section_menu
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    gap: 50px
+    padding-top: 19px
+    padding-bottom: 22px
+
+    &__subtitle
+        font-size: 14px
+        font-weight: 700
+        color: #222222
+        cursor: pointer
+    
+    &__subtitle:hover
+        color: $colorBasic
+
+/* раздел промо */
+.section_promo 
+    display: flex
+    align-items: center
+    background-image: url(/img/promo.jpg)
+    background-size: contain
+    background-position:  center
+    height: 38vw
+
+    &__content 
+        display: flex
+        gap: 16px
+        align-items: stretch
+
+
+    &__pic
+        width: 12px
+        background-color: $colorBasic
+    
+    &__box
+        display: flex
+        flex-direction: column
+        gap: 20px
+        
+    &__title 
+        color: #222
+        font-size: 60px
+        font-style: normal
+        font-weight: 900
+        line-height: 0.7
+        letter-spacing: 0.025em
+
+    &__subtitle
+        color: #222
+        font-size: 40px
+        font-style: normal
+        font-weight: 700
+        line-height: 0.8
+
+        &__pink
+            color: $colorBasic
+
+/* раздел hot */
+.section_hot
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: repeat(3, 261px)
+    gap: 20px
+    padding-top: 98px
+
+    &__item
+        position: relative
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
+        &__name
+            display: flex
+            flex-direction: column
+            position: absolute
+            top: 25px
+            gap: 4px
+            background-color: #fff
+            font-weight: 900
+            letter-spacing: 0.025em
+            padding: 10px 18px
+
+        &__text
+            font-size: 18px            
+            color: #222222
+
+        &__title
+            font-size: 30px
+            color: $colorBasic
+
+.big_item
+    grid-row: span 2
+    grid-column: span 1
+
+.men
+    background-image: url(/img/men.jpg)
+
+.women
+    background-image: url(/img/women.jpg)
+
+.kid
+    background-image: url(/img/kid.jpg)
+
+.accesories
+    background-image: url(/img/accesories.jpg)
+
+/* раздел рекомендуемое */
+.section_featured
+    margin-top: 100px
+
+    &__lead
+        color: #222
+        text-align: center
+        font-size: 30px
+        font-style: normal
+        font-weight: 700
+        letter-spacing: 0.025em
+
+    &__desc
+        margin-top: 6px
+        text-align: center
+        color: #9F9F9F
+        font-size: 14px
+        font-weight: 400
+        letter-spacing: 0.025em
+
+    &__items
+        margin-top: 60px
+        display: grid
+        grid-template-columns: repeat(4, 261px)
+        gap: 32px
+
+    &__item
+        cursor: pointer
+        display: block
+        position: relative
+        border: 1px solid #FFF
+
+        &__cart
+            background-color: $colorBasic
+            position: absolute
+            visibility: hidden
+            text-align: center
+            top: 30%
+            left: 25%
+            user-select: none
+
+            &__add
+                display: flex
+                fill: white
+                color: white
+                gap: 11px
+                border: 2px solid white  
+                justify-content: center
+                align-items: center
+                padding: 11px 13px 9px 13px
+                font-size: 13px
+                font-weight: 700
+
+    &__item:hover &__item__cart
+        visibility: visible
+    
+    &__item__cart__add:active
+        background-color: #fff
+        fill: $colorBasic
+        color: $colorBasic
+        border: 2px solid $colorBasic
+
+    &__item:hover
+        color: $colorBasic
+        filter: opacity(70%)
+    
+    &__item:active
+        border: 1px solid $colorBasic
+
+    &__content
+        display: flex
+        flex-direction: column
+        gap: 16px
+        padding-bottom: 10px
+
+    &__title
+        color: #000
+        font-size: 13px
+        font-weight: 400
+        padding-left: 18px
+
+    &__price
+        color: $colorBasic
+        font-size: 16px
+        font-weight: 700
+        padding-left: 18px
+        padding-right: 18px 
+
+    &__browse
+        display: flex
+        justify-content: center
+
+    &__btn
+        margin-top: 48px
+        width: 212px
+        height: 48px
+        background-color: $colorBasic
+        color: #FFF
+        padding: 15px 18px
+        font-size: 16px
+        font-weight: 700
+        border: 1px solid #FFF
+        letter-spacing: 0.025em
+        transition: color 0.1s linear
+
+    &__btn:hover
+        background-color: #FFF
+        color: $colorBasic
+        border: 1px solid $colorBasic
+
+/* раздел преимущества */
+.section_benefit
+    margin-top: 110px
+    display: flex
+
+    &__hot
+        position: relative
+
+        &__img
+            width: 100%
+            max-height: 529px
+
+        &__title
+            position: absolute
+        
+        &__title_d
+        
+        &__text
+
+    &__items
+        display: flex
+        flex-direction: column
+        justify-content: center
+        max-width: 350px
+        gap: 50px
+        background-color: #222224
+
+    &__item
+        display: flex
+        gap: 16px
+    
+    &__article
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+    &__title
+        margin-top: 9px
+        color: #FBFBFB
+        font-size: 20px
+        font-weight: 400
+
+    &__text
+        width: 360px
+        color: #FBFBFB
+        font-size: 14px
+        font-weight: 300
+        width: 240px
