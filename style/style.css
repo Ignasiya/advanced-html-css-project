@@ -185,10 +185,10 @@ details[open] summary::before {
 /* раздел промо */
 .section_promo {
   display: flex;
-  align-items: center;
-  background-image: url(img/promo.jpg);
+  background-image: url(../img/promo.jpg);
   background-size: contain;
   background-position: center;
+  align-items: center;
   height: 38vw;
 }
 .section_promo__content {
@@ -264,19 +264,19 @@ details[open] summary::before {
 }
 
 .men {
-  background-image: url(img/men.jpg);
+  background-image: url(../img/men.jpg);
 }
 
 .women {
-  background-image: url(img/women.jpg);
+  background-image: url(../img/women.jpg);
 }
 
 .kid {
-  background-image: url(img/kid.jpg);
+  background-image: url(../img/kid.jpg);
 }
 
 .accesories {
-  background-image: url(img/accesories.jpg);
+  background-image: url(../img/accesories.jpg);
 }
 
 /* раздел рекомендуемое */
@@ -401,28 +401,49 @@ details[open] summary::before {
   position: relative;
 }
 .section_benefit__hot__img {
-  width: 100%;
-  max-height: 529px;
+  width: 767px;
+  height: 100%;
+  filter: brightness(80%);
 }
 .section_benefit__hot__title {
   position: absolute;
+  top: 140px;
+  left: 40px;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 0.7;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+  width: 300px;
+}
+.section_benefit__hot__title_d {
+  color: #f16d7f;
+}
+.section_benefit__hot__text {
+  font-size: 32px;
 }
 .section_benefit__items {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 350px;
+  padding: 48px 38px;
+  width: 373px;
   gap: 50px;
   background-color: #222224;
 }
 .section_benefit__item {
   display: flex;
-  gap: 16px;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.section_benefit__item__img {
+  padding-top: 5px;
 }
 .section_benefit__article {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 17px;
 }
 .section_benefit__title {
   margin-top: 9px;
@@ -435,5 +456,192 @@ details[open] summary::before {
   color: #FBFBFB;
   font-size: 14px;
   font-weight: 300;
-  width: 240px;
+  width: 220px;
+}
+
+/* раздел подпишись */
+.section_subscribe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 97px;
+  height: 438px;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe_back {
+  background: linear-gradient(50deg, #ffffff, #000000), url(../img/background_subscribe.png);
+  background-size: cover;
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.subscribe_intersect {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.subscribe_intersect__img {
+  width: 96px;
+}
+.subscribe_intersect__text {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: #222224;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.025em;
+}
+.subscribe_intersect__name {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #f16d7f;
+  line-height: 0.6;
+}
+.subscribe_intersect__place {
+  font-size: 12px;
+  font-weight: 300;
+  color: #222224;
+}
+
+.subscribe_subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe_subscribe__title {
+  color: #222224;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+.subscribe_subscribe__subtitle {
+  max-width: 557px;
+  color: #222224;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+}
+.subscribe_subscribe__label {
+  margin-top: 32px;
+  display: flex;
+}
+.subscribe_subscribe__input {
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  background-color: #E1E1E1;
+  padding-left: 22px;
+  padding-right: 22px;
+  opacity: 0.67;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #222224;
+}
+.subscribe_subscribe__btn {
+  width: 100px;
+  height: 50px;
+  background-color: #F16D7F;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+.subscribe_subscribe__btn:hover {
+  background-color: #FFF;
+  color: #f16d7f;
+  border: 1px solid #f16d7f;
+}
+
+/* информация сайта */
+.section_info {
+  margin-top: 110px;
+  margin-bottom: 90px;
+  display: flex;
+  gap: 60px;
+}
+.section_info__about {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.section_info__about__text {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  line-height: 24px;
+  color: #898989;
+  width: 430px;
+}
+.section_info__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 176px;
+}
+.section_info__nav__title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #f16d7f;
+}
+.section_info__nav__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+.section_info__nav__menu__text {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #898989;
+}
+.section_info__nav__menu__text:hover {
+  color: #f16d7f;
+}
+
+/* подвал сайта */
+.footer {
+  display: flex;
+  background-color: #e6e6e6;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__copyright {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #7a7a7a;
+}
+.footer__nav {
+  display: flex;
+  gap: 7px;
+}
+.footer__link {
+  display: flex;
+  background-color: #FFF;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  fill: #b2b2b2;
+}
+.footer__link:hover {
+  background-color: #f16d7f;
+  fill: white;
 }/*# sourceMappingURL=style.css.map */

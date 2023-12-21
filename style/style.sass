@@ -172,11 +172,11 @@ details[open] summary::before
 
 /* раздел промо */
 .section_promo 
-    display: flex
-    align-items: center
-    background-image: url(img/promo.jpg)
+    display: flex    
+    background-image: url(../img/promo.jpg)
     background-size: contain
     background-position:  center
+    align-items: center
     height: 38vw
 
     &__content 
@@ -250,16 +250,16 @@ details[open] summary::before
     grid-column: span 1
 
 .men
-    background-image: url(img/men.jpg)
+    background-image: url(../img/men.jpg)
 
 .women
-    background-image: url(img/women.jpg)
+    background-image: url(../img/women.jpg)
 
 .kid
-    background-image: url(img/kid.jpg)
+    background-image: url(../img/kid.jpg)
 
 .accesories
-    background-image: url(img/accesories.jpg)
+    background-image: url(../img/accesories.jpg)
 
 /* раздел рекомендуемое */
 .section_featured
@@ -380,32 +380,49 @@ details[open] summary::before
         position: relative
 
         &__img
-            width: 100%
-            max-height: 529px
+            width: 767px
+            height: 100%
+            filter: brightness(80%)
 
         &__title
             position: absolute
+            top: 140px
+            left: 40px
+            font-size: 54px
+            font-weight: 700
+            line-height: 0.7
+            letter-spacing: 0.025em
+            color: #ffffff
+            width: 300px
         
         &__title_d
+            color: $colorBasic
         
         &__text
+            font-size: 32px
 
     &__items
         display: flex
         flex-direction: column
         justify-content: center
-        max-width: 350px
+        padding: 48px 38px
+        width: 373px
         gap: 50px
         background-color: #222224
 
     &__item
         display: flex
-        gap: 16px
+        gap: 30px
+        justify-content: center
+        align-items: flex-start
+
+        &__img
+            padding-top: 5px
     
     &__article
         display: flex
         flex-direction: column
-        align-items: flex-start
+        gap: 17px
 
     &__title
         margin-top: 9px
@@ -418,4 +435,186 @@ details[open] summary::before
         color: #FBFBFB
         font-size: 14px
         font-weight: 300
-        width: 240px
+        width: 220px
+
+/* раздел подпишись */
+.section_subscribe
+    display: grid
+    grid-template-columns: 1fr 1fr
+    margin-top: 97px
+    height: 438px
+    justify-content: center
+    align-items: center
+
+.subscribe_back
+    background: linear-gradient(50deg, #ffffff, #000000), url(../img/background_subscribe.png)
+    background-size: cover
+    background-blend-mode: screen
+    background-repeat: no-repeat
+    background-position: center
+
+.subscribe_intersect
+    display: flex
+    gap: 30px
+    align-items: center
+    justify-content: center
+
+    &__img
+        width: 96px
+
+    &__text
+        width: 420px
+        display: flex
+        flex-direction: column
+        gap: 18px
+        color: #222224
+        font-size: 16px
+        line-height: 26px
+        font-weight: 400
+        font-style: italic
+        letter-spacing: 0.025em
+    
+    &__name
+        font-size: 16px
+        font-weight: 700
+        letter-spacing: 0.025em
+        color: $colorBasic
+        line-height: 0.6
+
+    &__place
+        font-size: 12px
+        font-weight: 300
+        color: #222224
+
+.subscribe_subscribe
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    &__title
+        color: #222224
+        text-align: center
+        font-size: 24px
+        font-weight: 400
+        letter-spacing: 0.025em
+
+    &__subtitle
+        max-width: 557px
+        color: #222224
+        text-align: center
+        font-size: 14px
+        line-height: 24px
+
+    &__label
+        margin-top: 32px
+        display: flex
+
+    &__input
+        width: 300px
+        height: 50px
+        border: none
+        border-radius: 30px 0 0 30px
+        background-color: #E1E1E1
+        padding-left: 22px
+        padding-right: 22px
+        opacity: 0.67
+        font-size: 14px
+        font-weight: 400
+        letter-spacing: 0.025em
+        color: #222224
+
+    &__btn
+        width: 100px
+        height: 50px
+        background-color: #F16D7F
+        border: none
+        border-radius: 0 30px 30px 0
+        color: #FFF
+        text-align: center
+        font-size: 14px
+        font-weight: 400
+
+    &__btn:hover
+        background-color: #FFF
+        color: $colorBasic
+        border: 1px solid $colorBasic
+
+/* информация сайта */
+.section_info
+    margin-top: 110px
+    margin-bottom: 90px
+    display: flex
+    gap: 60px
+
+    &__about
+        display: flex
+        flex-direction: column
+        gap: 28px
+        
+        &__text
+            font-size: 14px
+            font-weight: 300
+            letter-spacing: 0.025em
+            line-height: 24px
+            color: #898989
+            width: 430px
+    
+    &__nav
+        display: flex
+        flex-direction: column
+        gap: 45px
+        width: 176px
+
+        &__title
+            font-size: 18px
+            font-weight: 700
+            letter-spacing: 0.025em
+            color: $colorBasic
+
+        &__menu
+            display: flex
+            flex-direction: column
+            gap: 23px
+
+            &__text
+                font-size: 16px
+                font-weight: 400
+                letter-spacing: 0.025em
+                color: #898989
+            
+            &__text:hover
+                color: $colorBasic
+
+/* подвал сайта */
+.footer
+    display: flex
+    background-color: #e6e6e6
+    padding-top: 24px
+    padding-bottom: 24px
+    justify-content: space-between
+    align-items: center
+
+    &__copyright
+        font-size: 16px
+        font-weight: 400
+        letter-spacing: 0.025em
+        color: #7a7a7a
+
+    &__nav
+        display: flex
+        gap: 7px
+
+    &__link
+        display: flex
+        background-color: #FFF
+        width: 32px
+        height: 32px
+        justify-content: center
+        align-items: center
+        fill: #b2b2b2
+        
+    &__link:hover
+        background-color: $colorBasic
+        fill: white
+        
