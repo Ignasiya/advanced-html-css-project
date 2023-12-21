@@ -1,4 +1,5 @@
 @import 'vars'
+@import 'mixins'
 
 *
     padding: 0
@@ -8,7 +9,6 @@
 body
     background-color: #FFF
     font-family: 'Lato', sans-serif
-    transition: 0.2s linear
 
 a 
     text-decoration: none
@@ -18,8 +18,6 @@ details
 
 summary
     display: block
-    font-size: 14px
-    font-weight: 300
 
 summary::-webkit-details-marker
     display: none
@@ -57,16 +55,11 @@ details[open] summary::before
         gap: 13px
         
         &__title
-            font-size: 27px
-            line-height: 32px
-            font-weight: 300  
+            @include fontMix(#222, 27px, 32px, 300)
             letter-spacing: 0.025em
-            color: #222
 
         &__title_d
-            font-weight: 900
-            color: #f16d7f
-            font-size: 28px
+            @include fontMix($colorBasic, 28px, 32px, 900)
     
     &__forminput
         display: flex
@@ -77,12 +70,12 @@ details[open] summary::before
             position: relative
             cursor: pointer
             padding: 10px
+            @include fontMix(#838383, 14px, normal, 300)
             width: 87px
             height: 38px
             background-color: #f9f9f9
             border: 1px solid #e6e6e6
             border-radius: 3px 0px 0px 3px
-            color: #838383
 
         &__browse:hover
             background-color: $colorBasic
@@ -94,11 +87,8 @@ details[open] summary::before
             border: 1px solid #e6e6e6
             padding-left: 16px
             padding-right: 16px
-            font-size: 14px
-            line-height: 32px
-            font-weight: 300
+            @include fontMix(#a4a4a4, 14px, 32px, 300)
             letter-spacing: 0.025em
-            color: #a4a4a4
             margin-left: -1px
             margin-right: -1px
     
@@ -117,6 +107,43 @@ details[open] summary::before
         &__btn:hover
             background-color: $colorBasic
             fill: #fff
+            
+        &__dropmenu
+            background-color: #fff
+            width: 262px
+            display: flex
+            flex-direction: column
+            gap: 10px
+            padding: 20px
+            position: absolute
+            left: -10px
+            top: 35px
+            cursor: auto
+
+            &__menu
+                display: flex
+                flex-direction: column
+
+            &__title
+                @include fontMix(#232323, 14px, 32px, 400)
+                letter-spacing: 0.025em
+                border-bottom: 1px solid #e6e6e6
+                margin-bottom: 10px
+
+            &__subtitle
+                @include fontMix(#4f4f4f, 14px, 28px, 400)
+                padding-left: 5px
+
+            &__subtitle:hover
+                color: $colorBasic 
+        
+        &__dropmenu:before
+            content: '\25B2'
+            display: block
+            top: -12px
+            left: 72px
+            position: absolute
+            color: white       
 
     &__right
         display: flex
@@ -145,11 +172,87 @@ details[open] summary::before
             font-size: 14px
             font-weight: 400
             letter-spacing: 0.025em
-    
+        
+        &__dropmenu
+            display: flex
+            flex-direction: column
+            position: absolute
+            cursor: auto
+            width: 262px
+            background-color: #fff
+            border-radius: 5px
+            padding: 20px
+            top: 50px
+            right: 0
+            gap: 10px
+
+            &__total
+                display: flex
+                justify-content: space-between
+                align-items: center
+                @include fontMix(#222, 16px, 3, 700)
+
+                &__price
+                    font-size: 18px
+            
+            &__checkout
+                border: 1px solid $colorBasic
+                padding: 19px
+                display: flex
+                align-content: center
+                justify-content: center
+                @include fontMix($colorBasic, 14px, 1.2, 700)
+
+            &__checkout:hover
+                color: #FFF
+                background-color: $colorBasic
+
+            &__tocart
+                border: 1px solid #4a4a4a
+                padding: 19px
+                display: flex
+                align-content: center
+                justify-content: center
+                @include fontMix(#4a4a4a, 14px, 1.2, 700)
+
+            &__tocart:hover
+                color: #FFF
+                background-color: #4a4a4a
+
     &__myaccount:hover
         background-color: #FFF
         color: $colorBasic
         border: 1px solid $colorBasic
+
+.pay_product
+    display: flex
+    gap: 14px
+    align-items: center
+    justify-content: space-between
+    border-bottom: 1px solid #e6e6e6
+    padding-bottom: 16px
+
+    &__cart
+        display: flex
+        gap: 14px
+        align-items: center
+
+    &__content
+        display: flex
+        gap: 10px
+        flex-direction: column
+
+        &__title
+            @include fontMix(#222, 12px, normal, 700)
+    
+        &__stars
+            fill: orange
+
+        &__price
+            @include fontMix($colorBasic, 13px, normal, 400)
+    
+    &__delete:hover
+        fill: $colorBasic
 
 /* раздел меню  */
 .section_menu
@@ -162,9 +265,7 @@ details[open] summary::before
     padding-bottom: 22px
 
     &__subtitle
-        font-size: 14px
-        font-weight: 700
-        color: #222222
+        @include fontMix(#222, 14px, normal, 700)
         cursor: pointer
     
     &__subtitle:hover
@@ -194,20 +295,12 @@ details[open] summary::before
         flex-direction: column
         gap: 20px
         
-    &__title 
-        color: #222
-        font-size: 60px
-        font-style: normal
-        font-weight: 900
-        line-height: 0.7
+    &__title
+        @include fontMix(#222, 60px, 0.7, 900)
         letter-spacing: 0.025em
 
     &__subtitle
-        color: #222
-        font-size: 40px
-        font-style: normal
-        font-weight: 700
-        line-height: 0.8
+        @include fontMix(#222, 40px, 0.8, 700)
 
         &__pink
             color: $colorBasic
@@ -225,6 +318,7 @@ details[open] summary::before
         background-size: cover
         background-position: center
         background-repeat: no-repeat
+        transition: transform 0.2s
 
         &__name
             display: flex
@@ -244,6 +338,9 @@ details[open] summary::before
         &__title
             font-size: 30px
             color: $colorBasic
+
+    &__item:hover
+        transform: scale(1.02)
 
 .big_item
     grid-row: span 2
@@ -266,19 +363,14 @@ details[open] summary::before
     margin-top: 100px
 
     &__lead
-        color: #222
+        @include fontMix(#222, 30px, normal, 700)
         text-align: center
-        font-size: 30px
-        font-style: normal
-        font-weight: 700
         letter-spacing: 0.025em
 
     &__desc
         margin-top: 6px
         text-align: center
-        color: #9F9F9F
-        font-size: 14px
-        font-weight: 400
+        @include fontMix(#9F9F9F, 14px, normal, 400)
         letter-spacing: 0.025em
 
     &__items
@@ -305,14 +397,12 @@ details[open] summary::before
             &__add
                 display: flex
                 fill: white
-                color: white
                 gap: 11px
                 border: 2px solid white  
                 justify-content: center
                 align-items: center
                 padding: 11px 13px 9px 13px
-                font-size: 13px
-                font-weight: 700
+                @include fontMix(white, 13px, normal, 700)
 
     &__item:hover &__item__cart
         visibility: visible
@@ -337,15 +427,11 @@ details[open] summary::before
         padding-bottom: 10px
 
     &__title
-        color: #000
-        font-size: 13px
-        font-weight: 400
+        @include fontMix(black, 13px, normal, 400)
         padding-left: 18px
 
     &__price
-        color: $colorBasic
-        font-size: 16px
-        font-weight: 700
+        @include fontMix($colorBasic, 16px, normal, 700)
         padding-left: 18px
         padding-right: 18px 
 
@@ -358,13 +444,10 @@ details[open] summary::before
         width: 212px
         height: 48px
         background-color: $colorBasic
-        color: #FFF
+        @include fontMix(white, 16px, normal, 700)
         padding: 15px 18px
-        font-size: 16px
-        font-weight: 700
         border: 1px solid #FFF
         letter-spacing: 0.025em
-        transition: color 0.1s linear
 
     &__btn:hover
         background-color: #FFF
@@ -388,11 +471,8 @@ details[open] summary::before
             position: absolute
             top: 140px
             left: 40px
-            font-size: 54px
-            font-weight: 700
-            line-height: 0.7
+            @include fontMix(white, 54px, 0.7, 700)
             letter-spacing: 0.025em
-            color: #ffffff
             width: 300px
         
         &__title_d
@@ -426,15 +506,11 @@ details[open] summary::before
 
     &__title
         margin-top: 9px
-        color: #FBFBFB
-        font-size: 20px
-        font-weight: 400
+        @include fontMix(white, 20px, normal, 400)
 
     &__text
         width: 360px
-        color: #FBFBFB
-        font-size: 14px
-        font-weight: 300
+        @include fontMix(white, 14px, normal, 300)
         width: 220px
 
 /* раздел подпишись */
@@ -467,24 +543,16 @@ details[open] summary::before
         display: flex
         flex-direction: column
         gap: 18px
-        color: #222224
-        font-size: 16px
-        line-height: 26px
-        font-weight: 400
+        @include fontMix(black, 16px, 26px, 400)
         font-style: italic
         letter-spacing: 0.025em
     
     &__name
-        font-size: 16px
-        font-weight: 700
+        @include fontMix($colorBasic, 16px, 0.8, 700)
         letter-spacing: 0.025em
-        color: $colorBasic
-        line-height: 0.6
 
     &__place
-        font-size: 12px
-        font-weight: 300
-        color: #222224
+        @include fontMix(black, 12px, normal, 400)
 
 .subscribe_subscribe
     display: flex
@@ -493,18 +561,14 @@ details[open] summary::before
     align-items: center
 
     &__title
-        color: #222224
         text-align: center
-        font-size: 24px
-        font-weight: 400
+        @include fontMix(black, 24px, normal, 400)
         letter-spacing: 0.025em
 
     &__subtitle
         max-width: 557px
-        color: #222224
+        @include fontMix(black, 14px, 24px, 400)
         text-align: center
-        font-size: 14px
-        line-height: 24px
 
     &__label
         margin-top: 32px
@@ -519,21 +583,17 @@ details[open] summary::before
         padding-left: 22px
         padding-right: 22px
         opacity: 0.67
-        font-size: 14px
-        font-weight: 400
+        @include fontMix(black, 14px, normal, 400)
         letter-spacing: 0.025em
-        color: #222224
 
     &__btn
         width: 100px
         height: 50px
-        background-color: #F16D7F
+        background-color: $colorBasic
         border: none
         border-radius: 0 30px 30px 0
-        color: #FFF
+        @include fontMix(white, 14px, normal, 400)
         text-align: center
-        font-size: 14px
-        font-weight: 400
 
     &__btn:hover
         background-color: #FFF
@@ -553,11 +613,8 @@ details[open] summary::before
         gap: 28px
         
         &__text
-            font-size: 14px
-            font-weight: 300
             letter-spacing: 0.025em
-            line-height: 24px
-            color: #898989
+            @include fontMix(#898989, 14px, 24px, 300)
             width: 430px
     
     &__nav
@@ -567,10 +624,8 @@ details[open] summary::before
         width: 176px
 
         &__title
-            font-size: 18px
-            font-weight: 700
+            @include fontMix($colorBasic, 18px, normal, 700)
             letter-spacing: 0.025em
-            color: $colorBasic
 
         &__menu
             display: flex
@@ -578,10 +633,8 @@ details[open] summary::before
             gap: 23px
 
             &__text
-                font-size: 16px
-                font-weight: 400
+                @include fontMix(#898989, 16px, normal, 400)
                 letter-spacing: 0.025em
-                color: #898989
             
             &__text:hover
                 color: $colorBasic
@@ -596,10 +649,8 @@ details[open] summary::before
     align-items: center
 
     &__copyright
-        font-size: 16px
-        font-weight: 400
+        @include fontMix(#7a7a7a, 16px, normal, 400)
         letter-spacing: 0.025em
-        color: #7a7a7a
 
     &__nav
         display: flex

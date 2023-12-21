@@ -8,7 +8,6 @@
 body {
   background-color: #FFF;
   font-family: "Lato", sans-serif;
-  transition: 0.2s linear;
 }
 
 a {
@@ -23,8 +22,6 @@ details {
 
 summary {
   display: block;
-  font-size: 14px;
-  font-weight: 300;
 }
 
 summary::-webkit-details-marker {
@@ -67,16 +64,17 @@ details[open] summary::before {
   gap: 13px;
 }
 .header_page__logo__title {
+  color: #222;
   font-size: 27px;
   line-height: 32px;
   font-weight: 300;
   letter-spacing: 0.025em;
-  color: #222;
 }
 .header_page__logo__title_d {
-  font-weight: 900;
   color: #f16d7f;
   font-size: 28px;
+  line-height: 32px;
+  font-weight: 900;
 }
 .header_page__forminput {
   display: flex;
@@ -87,12 +85,15 @@ details[open] summary::before {
   position: relative;
   cursor: pointer;
   padding: 10px;
+  color: #838383;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 300;
   width: 87px;
   height: 38px;
   background-color: #f9f9f9;
   border: 1px solid #e6e6e6;
   border-radius: 3px 0px 0px 3px;
-  color: #838383;
 }
 .header_page__forminput__browse:hover {
   background-color: #f16d7f;
@@ -104,11 +105,11 @@ details[open] summary::before {
   border: 1px solid #e6e6e6;
   padding-left: 16px;
   padding-right: 16px;
+  color: #a4a4a4;
   font-size: 14px;
   line-height: 32px;
   font-weight: 300;
   letter-spacing: 0.025em;
-  color: #a4a4a4;
   margin-left: -1px;
   margin-right: -1px;
 }
@@ -127,6 +128,49 @@ details[open] summary::before {
 .header_page__forminput__btn:hover {
   background-color: #f16d7f;
   fill: #fff;
+}
+.header_page__forminput__dropmenu {
+  background-color: #fff;
+  width: 262px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  position: absolute;
+  left: -10px;
+  top: 35px;
+  cursor: auto;
+}
+.header_page__forminput__dropmenu__menu {
+  display: flex;
+  flex-direction: column;
+}
+.header_page__forminput__dropmenu__title {
+  color: #232323;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 10px;
+}
+.header_page__forminput__dropmenu__subtitle {
+  color: #4f4f4f;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  padding-left: 5px;
+}
+.header_page__forminput__dropmenu__subtitle:hover {
+  color: #f16d7f;
+}
+.header_page__forminput__dropmenu:before {
+  content: "▲";
+  display: block;
+  top: -12px;
+  left: 72px;
+  position: absolute;
+  color: white;
 }
 .header_page__right {
   display: flex;
@@ -156,10 +200,102 @@ details[open] summary::before {
   font-weight: 400;
   letter-spacing: 0.025em;
 }
+.header_page__myaccount__dropmenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  cursor: auto;
+  width: 262px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  top: 50px;
+  right: 0;
+  gap: 10px;
+}
+.header_page__myaccount__dropmenu__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #222;
+  font-size: 16px;
+  line-height: 3;
+  font-weight: 700;
+}
+.header_page__myaccount__dropmenu__total__price {
+  font-size: 18px;
+}
+.header_page__myaccount__dropmenu__checkout {
+  border: 1px solid #f16d7f;
+  padding: 19px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: #f16d7f;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.header_page__myaccount__dropmenu__checkout:hover {
+  color: #FFF;
+  background-color: #f16d7f;
+}
+.header_page__myaccount__dropmenu__tocart {
+  border: 1px solid #4a4a4a;
+  padding: 19px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: #4a4a4a;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.header_page__myaccount__dropmenu__tocart:hover {
+  color: #FFF;
+  background-color: #4a4a4a;
+}
 .header_page__myaccount:hover {
   background-color: #FFF;
   color: #f16d7f;
   border: 1px solid #f16d7f;
+}
+
+.pay_product {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 16px;
+}
+.pay_product__cart {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.pay_product__content {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.pay_product__content__title {
+  color: #222;
+  font-size: 12px;
+  line-height: normal;
+  font-weight: 700;
+}
+.pay_product__content__stars {
+  fill: orange;
+}
+.pay_product__content__price {
+  color: #f16d7f;
+  font-size: 13px;
+  line-height: normal;
+  font-weight: 400;
+}
+.pay_product__delete:hover {
+  fill: #f16d7f;
 }
 
 /* раздел меню  */
@@ -173,9 +309,10 @@ details[open] summary::before {
   padding-bottom: 22px;
 }
 .section_menu__subtitle {
+  color: #222;
   font-size: 14px;
+  line-height: normal;
   font-weight: 700;
-  color: #222222;
   cursor: pointer;
 }
 .section_menu__subtitle:hover {
@@ -208,17 +345,15 @@ details[open] summary::before {
 .section_promo__title {
   color: #222;
   font-size: 60px;
-  font-style: normal;
-  font-weight: 900;
   line-height: 0.7;
+  font-weight: 900;
   letter-spacing: 0.025em;
 }
 .section_promo__subtitle {
   color: #222;
   font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 0.8;
+  font-weight: 700;
 }
 .section_promo__subtitle__pink {
   color: #f16d7f;
@@ -237,6 +372,7 @@ details[open] summary::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: transform 0.2s;
 }
 .section_hot__item__name {
   display: flex;
@@ -256,6 +392,9 @@ details[open] summary::before {
 .section_hot__item__title {
   font-size: 30px;
   color: #f16d7f;
+}
+.section_hot__item:hover {
+  transform: scale(1.02);
 }
 
 .big_item {
@@ -285,10 +424,10 @@ details[open] summary::before {
 }
 .section_featured__lead {
   color: #222;
-  text-align: center;
   font-size: 30px;
-  font-style: normal;
+  line-height: normal;
   font-weight: 700;
+  text-align: center;
   letter-spacing: 0.025em;
 }
 .section_featured__desc {
@@ -296,6 +435,7 @@ details[open] summary::before {
   text-align: center;
   color: #9F9F9F;
   font-size: 14px;
+  line-height: normal;
   font-weight: 400;
   letter-spacing: 0.025em;
 }
@@ -325,13 +465,14 @@ details[open] summary::before {
 .section_featured__item__cart__add {
   display: flex;
   fill: white;
-  color: white;
   gap: 11px;
   border: 2px solid white;
   justify-content: center;
   align-items: center;
   padding: 11px 13px 9px 13px;
+  color: white;
   font-size: 13px;
+  line-height: normal;
   font-weight: 700;
 }
 .section_featured__item:hover .section_featured__item__cart {
@@ -357,14 +498,16 @@ details[open] summary::before {
   padding-bottom: 10px;
 }
 .section_featured__title {
-  color: #000;
+  color: black;
   font-size: 13px;
+  line-height: normal;
   font-weight: 400;
   padding-left: 18px;
 }
 .section_featured__price {
   color: #f16d7f;
   font-size: 16px;
+  line-height: normal;
   font-weight: 700;
   padding-left: 18px;
   padding-right: 18px;
@@ -378,13 +521,13 @@ details[open] summary::before {
   width: 212px;
   height: 48px;
   background-color: #f16d7f;
-  color: #FFF;
-  padding: 15px 18px;
+  color: white;
   font-size: 16px;
+  line-height: normal;
   font-weight: 700;
+  padding: 15px 18px;
   border: 1px solid #FFF;
   letter-spacing: 0.025em;
-  transition: color 0.1s linear;
 }
 .section_featured__btn:hover {
   background-color: #FFF;
@@ -409,11 +552,11 @@ details[open] summary::before {
   position: absolute;
   top: 140px;
   left: 40px;
+  color: white;
   font-size: 54px;
-  font-weight: 700;
   line-height: 0.7;
+  font-weight: 700;
   letter-spacing: 0.025em;
-  color: #ffffff;
   width: 300px;
 }
 .section_benefit__hot__title_d {
@@ -447,14 +590,16 @@ details[open] summary::before {
 }
 .section_benefit__title {
   margin-top: 9px;
-  color: #FBFBFB;
+  color: white;
   font-size: 20px;
+  line-height: normal;
   font-weight: 400;
 }
 .section_benefit__text {
   width: 360px;
-  color: #FBFBFB;
+  color: white;
   font-size: 14px;
+  line-height: normal;
   font-weight: 300;
   width: 220px;
 }
@@ -491,7 +636,7 @@ details[open] summary::before {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  color: #222224;
+  color: black;
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
@@ -499,16 +644,17 @@ details[open] summary::before {
   letter-spacing: 0.025em;
 }
 .subscribe_intersect__name {
+  color: #f16d7f;
   font-size: 16px;
+  line-height: 0.8;
   font-weight: 700;
   letter-spacing: 0.025em;
-  color: #f16d7f;
-  line-height: 0.6;
 }
 .subscribe_intersect__place {
+  color: black;
   font-size: 12px;
-  font-weight: 300;
-  color: #222224;
+  line-height: normal;
+  font-weight: 400;
 }
 
 .subscribe_subscribe {
@@ -518,18 +664,20 @@ details[open] summary::before {
   align-items: center;
 }
 .subscribe_subscribe__title {
-  color: #222224;
   text-align: center;
+  color: black;
   font-size: 24px;
+  line-height: normal;
   font-weight: 400;
   letter-spacing: 0.025em;
 }
 .subscribe_subscribe__subtitle {
   max-width: 557px;
-  color: #222224;
-  text-align: center;
+  color: black;
   font-size: 14px;
   line-height: 24px;
+  font-weight: 400;
+  text-align: center;
 }
 .subscribe_subscribe__label {
   margin-top: 32px;
@@ -544,21 +692,23 @@ details[open] summary::before {
   padding-left: 22px;
   padding-right: 22px;
   opacity: 0.67;
+  color: black;
   font-size: 14px;
+  line-height: normal;
   font-weight: 400;
   letter-spacing: 0.025em;
-  color: #222224;
 }
 .subscribe_subscribe__btn {
   width: 100px;
   height: 50px;
-  background-color: #F16D7F;
+  background-color: #f16d7f;
   border: none;
   border-radius: 0 30px 30px 0;
-  color: #FFF;
-  text-align: center;
+  color: white;
   font-size: 14px;
+  line-height: normal;
   font-weight: 400;
+  text-align: center;
 }
 .subscribe_subscribe__btn:hover {
   background-color: #FFF;
@@ -579,11 +729,11 @@ details[open] summary::before {
   gap: 28px;
 }
 .section_info__about__text {
-  font-size: 14px;
-  font-weight: 300;
   letter-spacing: 0.025em;
-  line-height: 24px;
   color: #898989;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
   width: 430px;
 }
 .section_info__nav {
@@ -593,10 +743,11 @@ details[open] summary::before {
   width: 176px;
 }
 .section_info__nav__title {
+  color: #f16d7f;
   font-size: 18px;
+  line-height: normal;
   font-weight: 700;
   letter-spacing: 0.025em;
-  color: #f16d7f;
 }
 .section_info__nav__menu {
   display: flex;
@@ -604,10 +755,11 @@ details[open] summary::before {
   gap: 23px;
 }
 .section_info__nav__menu__text {
+  color: #898989;
   font-size: 16px;
+  line-height: normal;
   font-weight: 400;
   letter-spacing: 0.025em;
-  color: #898989;
 }
 .section_info__nav__menu__text:hover {
   color: #f16d7f;
@@ -623,10 +775,11 @@ details[open] summary::before {
   align-items: center;
 }
 .footer__copyright {
+  color: #7a7a7a;
   font-size: 16px;
+  line-height: normal;
   font-weight: 400;
   letter-spacing: 0.025em;
-  color: #7a7a7a;
 }
 .footer__nav {
   display: flex;
