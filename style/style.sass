@@ -10,6 +10,9 @@ body
     background-color: #FFF
     font-family: 'Lato', sans-serif
 
+li
+    list-style-type: none
+
 a
     text-decoration: none
 
@@ -77,14 +80,15 @@ details[open] summary::before
             background-color: #f9f9f9
             border: 1px solid #e6e6e6
             border-radius: 3px 0px 0px 3px
+            transition: color 0.4s, background-color 0.4s
 
             &[open]
                 background-color: $colorBasic
                 color: #FFF
 
-        &__browse:hover
-            background-color: $colorBasic
-            color: #FFF
+            &:hover
+                background-color: $colorBasic
+                color: #FFF
 
         &__search
             width: 279px
@@ -108,10 +112,11 @@ details[open] summary::before
             align-items: center
             cursor: pointer
             fill: #a4a4a4
+            transition: color 0.4s, background-color 0.4s
 
-        &__btn:hover
-            background-color: $colorBasic
-            fill: #fff
+            &:hover
+                background-color: $colorBasic
+                fill: #fff
 
         &__dropmenu
             background-color: #fff
@@ -138,9 +143,10 @@ details[open] summary::before
             &__subtitle
                 @include fontMix(#4f4f4f, 14px, 28px, 400)
                 padding-left: 5px
+                transition: color 0.4s
 
-            &__subtitle:hover
-                color: $colorBasic
+                &:hover
+                    color: $colorBasic
 
         &__dropmenu:before
             content: '\25B2'
@@ -158,9 +164,10 @@ details[open] summary::before
 
     &__cart
         fill: #222
+        transition: fill 0.4s
 
-    &__cart:hover
-        fill: $colorBasic
+        &:hover
+            fill: $colorBasic
 
     &__myaccount
         display: block
@@ -171,6 +178,7 @@ details[open] summary::before
         padding: 10px 15px
         color: #FFF
         border: 1px solid #FFF
+        transition: color 0.4s, border-color 0.4s, background-color 0.4s
 
         &__text
             font-size: 14px
@@ -207,10 +215,11 @@ details[open] summary::before
                 align-content: center
                 justify-content: center
                 @include fontMix($colorBasic, 14px, 1.2, 700)
+                transition: color 0.4s,background-color 0.4s
 
-            &__checkout:hover
-                color: #FFF
-                background-color: $colorBasic
+                &:hover
+                    color: #FFF
+                    background-color: $colorBasic
 
             &__tocart
                 border: 1px solid #4a4a4a
@@ -219,19 +228,20 @@ details[open] summary::before
                 align-content: center
                 justify-content: center
                 @include fontMix(#4a4a4a, 14px, 1.2, 700)
+                transition: color 0.4s, background-color 0.4s
 
-            &__tocart:hover
-                color: #FFF
-                background-color: #4a4a4a
+                &:hover
+                    color: #FFF
+                    background-color: #4a4a4a
         &[open]
             background-color: #FFF
             color: $colorBasic
             border: 1px solid $colorBasic
 
-    &__myaccount:hover
-        background-color: #FFF
-        color: $colorBasic
-        border: 1px solid $colorBasic
+        &:hover
+            background-color: #FFF
+            color: $colorBasic
+            border: 1px solid $colorBasic
 
 .pay_product
     display: flex
@@ -260,8 +270,12 @@ details[open] summary::before
         &__price
             @include fontMix($colorBasic, 13px, normal, 400)
 
-    &__delete:hover
-        fill: $colorBasic
+    &__delete
+        fill: #c0c0c0
+        transition: fill 0.4s
+
+        &:hover
+            fill: $colorBasic
 
 /* раздел меню  */
 .section_menu
@@ -270,15 +284,111 @@ details[open] summary::before
     align-items: center
     justify-content: center
 
+    &__list
+        position: relative
+
+        &::after, &::before
+            content: ""
+            width: 0
+            border: solid transparent
+            position: absolute
+            left: 50%
+            top: 29px
+            transform: translateX(-50%)
+            opacity: 0
+            visibility: hidden
+            transition: opacity 0.4s, visibility 0s linear 0.4s
+            z-index: 3
+
+        &::before
+            border-bottom-color: #e8e8e8
+            border-width: 12px
+
+        &::after
+            border-bottom-color: white
+            border-width: 14px
+
+        &:hover .section_menu__box
+            opacity: 1
+            visibility: visible
+            transition-delay: 0s
+
+        &:hover::after, &:hover::before
+            opacity: 1
+            visibility: visible
+            transition-delay: 0s
+
     &__subtitle
         @include fontMix(#222, 14px, normal, 700)
         cursor: pointer
+        display: block
         padding: 19px 25px 22px
         border-bottom: 3px solid white
+        transition: color 0.4s, border-color 0.4s
 
-    &__subtitle:hover
-        color: $colorBasic
-        border-bottom: 3px solid $colorBasic
+        &:hover
+            color: $colorBasic
+            border-bottom: 3px solid $colorBasic
+
+    &__box
+        background-color: #fff
+        border-radius: 5px
+        border: 1px solid #e8e8e8
+        padding: 20px
+        position: absolute
+        left: 50%
+        top: 52px
+        opacity: 0
+        visibility: hidden
+        transition: opacity 0.4s, visibility 0s linear 0.4s
+        z-index: 2
+        display: flex
+
+    &__translateX_13
+        transform: translateX(-130pt)
+
+    &__translateX_20
+        transform: translateX(-201pt)
+
+    &__translateX_27
+        transform: translateX(-272pt)
+
+    &__translateX_35
+        transform: translateX(-356pt)
+
+    &__translateX_24
+        transform: translateX(-245pt)
+
+    &__translateX_12
+        transform: translateX(-127pt)
+
+    &__item
+        display: flex
+        flex-direction: column
+        gap: 10px
+        lasttype
+        margin-bottom: 10px
+        width: 235px
+        margin-right: 45px
+
+        &__title
+            @include fontMix(#232323, 14px, 20px, 400)
+            letter-spacing: 0.025em
+            padding-bottom: 5px
+            border-bottom: 1px solid #e8e8e8
+            margin-bottom: 4px
+
+        &__link
+            @include fontMix(#646464, 14px, 20px, 400)
+            letter-spacing: 0.025em
+            display: block
+            transition: color 0.4s
+
+            &:hover
+                color: $colorBasic
+
+        &:last-of-type
+            margin-right: 0
 
 /* раздел промо */
 .section_promo
@@ -347,8 +457,8 @@ details[open] summary::before
             font-size: 30px
             color: $colorBasic
 
-    &__item:hover
-        transform: scale(1.02)
+        &:hover
+            transform: scale(1.02)
 
 .big_item
     grid-row: span 2
@@ -392,15 +502,17 @@ details[open] summary::before
         display: block
         position: relative
         border: 1px solid #FFF
+        transition: border 0.4s, background-color 0.4s
 
         &__cart
-            background-color: $colorBasic
             position: absolute
-            visibility: hidden
+            background-color: rgba(0, 0, 0, 0.5)
+            opacity: 0
             text-align: center
             top: 30%
             left: 25%
             user-select: none
+            transition: opacity 0.2s
 
             &__add
                 display: flex
@@ -411,22 +523,29 @@ details[open] summary::before
                 align-items: center
                 padding: 11px 13px 9px 13px
                 @include fontMix(white, 13px, normal, 700)
+                transition: background-color 0.4s
 
-    &__item:hover &__item__cart
-        visibility: visible
+                &:hover
+                    background-color: $colorBasic
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, 0.5)
+            opacity: 0
+            transition: opacity 0.4s
 
-    &__item__cart__add:active
-        background-color: #fff
-        fill: $colorBasic
-        color: $colorBasic
-        border: 2px solid $colorBasic
+        &:hover::before
+            opacity: 1
 
-    &__item:hover
-        color: $colorBasic
-        filter: opacity(70%)
+        &:hover
+            border: 1px solid $colorBasic
 
-    &__item:active
-        border: 1px solid $colorBasic
+        &:hover &__cart
+            opacity: 1
 
     &__content
         display: flex
@@ -459,11 +578,12 @@ details[open] summary::before
         padding: 15px 18px
         border: 1px solid #FFF
         letter-spacing: 0.025em
+        transition: background-color 0.4s, color 0.4s, border 0.4s
 
-    &__btn:hover
-        background-color: #FFF
-        color: $colorBasic
-        border: 1px solid $colorBasic
+        &:hover
+            background-color: #FFF
+            color: $colorBasic
+            border: 1px solid $colorBasic
 
 /* раздел навигации */
 .top-head
@@ -521,6 +641,7 @@ details[open] summary::before
 
             &__title
                 @include fontMix(#6f6e6e, 14px, 14px, 400)
+                transition: color 0.4s
 
                 &:hover
                     color: $colorBasic
@@ -624,6 +745,7 @@ details[open] summary::before
     &__page
         @include fontMix(#c4c4c4, 16px, 26px, 700)
         padding: 17px 8px
+        transition: color 0.4s
 
         &:hover
             color: $colorBasic
@@ -639,11 +761,12 @@ details[open] summary::before
         padding: 15px 18px
         border: 1px solid $colorBasic
         letter-spacing: 0.025em
+        transition: color 0.4s, background-color 0.4s, border 0.4s
 
-    &__btn:hover
-        background-color: $colorBasic
-        color: white
-        border: 1px solid white
+        &:hover
+            background-color: $colorBasic
+            color: white
+            border: 1px solid white
 
 .filter
     &__content
@@ -662,6 +785,7 @@ details[open] summary::before
 
     &__link
         @include fontMix(#6F6E6E, 14px, 17px, 400)
+        transition: color 0.4s
 
         &__box
             padding: 24px 16px
@@ -836,11 +960,12 @@ details[open] summary::before
         border-radius: 0 30px 30px 0
         @include fontMix(white, 14px, normal, 400)
         text-align: center
+        transition: color 0.4s, background-color 0.4s, border 0.4s
 
-    &__btn:hover
-        background-color: #FFF
-        color: $colorBasic
-        border: 1px solid $colorBasic
+        &:hover
+            background-color: #FFF
+            color: $colorBasic
+            border: 1px solid $colorBasic
 
 /* информация сайта */
 .section_info
@@ -877,9 +1002,10 @@ details[open] summary::before
             &__text
                 @include fontMix(#898989, 16px, normal, 400)
                 letter-spacing: 0.025em
+                transition: color 0.4s
 
-            &__text:hover
-                color: $colorBasic
+                &:hover
+                    color: $colorBasic
 
 /* подвал сайта */
 .footer
@@ -906,7 +1032,8 @@ details[open] summary::before
         justify-content: center
         align-items: center
         fill: #b2b2b2
+        transition: fill 0.4s, background-color 0.4s
 
-    &__link:hover
-        background-color: $colorBasic
-        fill: white
+        &:hover
+            background-color: $colorBasic
+            fill: white
