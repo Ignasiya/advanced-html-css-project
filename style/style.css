@@ -359,7 +359,7 @@ details[open] summary::before {
   visibility: visible;
   transition-delay: 0s;
 }
-.section_menu__list:hover::after, .section_menu__list:hover::before {
+.section_menu__list:not(:first-child):hover::after, .section_menu__list:not(:first-child):hover::before {
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
@@ -1030,6 +1030,7 @@ details[open] summary::before {
   align-items: center;
   justify-content: space-between;
   height: 700px;
+  background-color: #f7f7f7;
 }
 .section_single img {
   height: 100%;
@@ -1053,8 +1054,12 @@ details[open] summary::before {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: -60px;
   padding-top: 60px;
   padding-bottom: 120px;
+  background: #fff;
+  position: relative;
+  z-index: 1;
 }
 .section_product__nav {
   text-align: center;
