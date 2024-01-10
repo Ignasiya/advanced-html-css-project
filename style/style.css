@@ -448,11 +448,14 @@ details[open] summary::before {
 /* раздел промо */
 .section_promo {
   display: flex;
+  flex-direction: column;
   background-image: url(../img/promo.jpg);
   background-size: contain;
   background-position: center;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   height: 38vw;
+  gap: 20px;
 }
 .section_promo__content {
   display: flex;
@@ -1325,13 +1328,11 @@ details[open] summary::before {
 .section_info {
   margin-top: 110px;
   margin-bottom: 90px;
-  display: flex;
-  gap: 60px;
+  display: inline-block;
 }
 .section_info__about {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+  display: inline-block;
+  margin-right: 50px;
 }
 .section_info__about__text {
   letter-spacing: 0.025em;
@@ -1340,12 +1341,15 @@ details[open] summary::before {
   line-height: 24px;
   font-weight: 300;
   width: 430px;
+  margin-top: 28px;
 }
 .section_info__nav {
-  display: flex;
-  flex-direction: column;
-  gap: 45px;
+  display: inline-block;
   width: 176px;
+  margin-right: 60px;
+}
+.section_info__nav:last-child {
+  margin-right: 0;
 }
 .section_info__nav__title {
   color: #f16d7f;
@@ -1353,24 +1357,67 @@ details[open] summary::before {
   line-height: normal;
   font-weight: 700;
   letter-spacing: 0.025em;
-}
-.section_info__nav__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 23px;
+  margin-bottom: 45px;
 }
 .section_info__nav__menu__text {
+  display: block;
   color: #898989;
   font-size: 16px;
   line-height: normal;
   font-weight: 400;
   letter-spacing: 0.025em;
   transition: color 0.4s;
+  margin-bottom: 23px;
+}
+.section_info__nav__menu__text:last-child {
+  margin-bottom: 0;
 }
 .section_info__nav__menu__text:hover {
   color: #f16d7f;
 }
 
+@supports (display: flex) {
+  .section_info {
+    display: flex;
+  }
+  .section_info__about {
+    display: flex;
+    flex-direction: column;
+  }
+  .section_info__nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .section_info__nav__menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@supports (gap: 0) {
+  .section_info {
+    gap: 60px;
+  }
+  .section_info__about {
+    gap: 28px;
+    margin-right: 0;
+  }
+  .section_info__about__text {
+    margin-top: 0;
+  }
+  .section_info__nav {
+    gap: 45px;
+    margin-right: 0;
+  }
+  .section_info__nav__title {
+    margin-bottom: 0;
+  }
+  .section_info__nav__menu {
+    gap: 23px;
+  }
+  .section_info__nav__menu__text {
+    margin-bottom: 0;
+  }
+}
 /* подвал сайта */
 .footer {
   display: flex;

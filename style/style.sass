@@ -392,11 +392,14 @@ details[open] summary::before
 /* раздел промо */
 .section_promo
     display: flex
+    flex-direction: column
     background-image: url(../img/promo.jpg)
     background-size: contain
     background-position: center
-    align-items: center
+    align-items: flex-start
+    justify-content: center
     height: 38vw
+    gap: 20px
 
     &__content
         display: flex
@@ -1126,41 +1129,84 @@ details[open] summary::before
 .section_info
     margin-top: 110px
     margin-bottom: 90px
-    display: flex
-    gap: 60px
+    display: inline-block
 
     &__about
-        display: flex
-        flex-direction: column
-        gap: 28px
+        display: inline-block
+        margin-right: 50px
 
         &__text
             letter-spacing: 0.025em
             @include fontMix(#898989, 14px, 24px, 300)
             width: 430px
+            margin-top: 28px
 
     &__nav
-        display: flex
-        flex-direction: column
-        gap: 45px
+        display: inline-block
         width: 176px
+        margin-right: 60px
+
+        &:last-child
+            margin-right: 0
 
         &__title
             @include fontMix($colorBasic, 18px, normal, 700)
             letter-spacing: 0.025em
+            margin-bottom: 45px
 
         &__menu
-            display: flex
-            flex-direction: column
-            gap: 23px
-
             &__text
+                display: block
                 @include fontMix(#898989, 16px, normal, 400)
                 letter-spacing: 0.025em
                 transition: color 0.4s
+                margin-bottom: 23px
+
+                &:last-child
+                    margin-bottom: 0
 
                 &:hover
                     color: $colorBasic
+
+@supports (display: flex)
+    .section_info
+        display: flex
+
+        &__about
+            display: flex
+            flex-direction: column
+
+        &__nav
+            display: flex
+            flex-direction: column
+
+            &__menu
+                display: flex
+                flex-direction: column
+
+@supports (gap: 0)
+    .section_info
+        gap: 60px
+
+        &__about
+            gap: 28px
+            margin-right: 0
+
+            &__text
+                margin-top: 0
+
+        &__nav
+            gap: 45px
+            margin-right: 0
+
+            &__title
+                margin-bottom: 0
+
+            &__menu
+                gap: 23px
+
+                &__text
+                    margin-bottom: 0
 
 /* подвал сайта */
 .footer
