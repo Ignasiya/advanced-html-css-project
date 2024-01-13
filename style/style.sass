@@ -20,28 +20,28 @@ details
     user-select: none
     cursor: pointer
 
+    &[open] summary::before
+        transform: rotate(-90deg)
+
 summary
     display: block
 
-summary::-webkit-details-marker
-    display: none
+    &::-webkit-details-marker
+        display: none
 
-summary::before
-    content: '\25C4'
-    display: block
-    float: right
-    transform: rotate(0deg)
-    transition: transform 0.3s ease-in-out
-
-details[open] summary::before
-    transform: rotate(-90deg)
+    &::before
+        content: '\25C4'
+        display: block
+        float: right
+        transform: rotate(0deg)
+        transition: transform 0.3s ease-in-out
 
 .center
     padding-left: calc(50% - $widthSite / 2)
     padding-right: calc(50% - $widthSite / 2)
 
 /* шапка сайта */
-.header_page
+.header
     padding-bottom: 24px
     padding-top: 25px
     display: flex
@@ -53,108 +53,96 @@ details[open] summary::before
         align-items: center
         gap: 37px
 
-    &__logo
-        display: flex
-        align-items: center
-        gap: 13px
-
-        &__title
-            @include fontMix(#222, 27px, 32px, 300)
-            letter-spacing: 0.025em
-
-        &__title_d
-            @include fontMix($colorBasic, 28px, 32px, 900)
-
     &__forminput
         display: flex
         align-items: center
 
-        &__browse
-            display: block
-            position: relative
-            z-index: 1
-            padding: 10px
-            @include fontMix(#838383, 14px, normal, 300)
-            width: 87px
-            height: 38px
-            background-color: #f9f9f9
-            border: 1px solid #e6e6e6
-            border-radius: 3px 0px 0px 3px
-            transition: color 0.4s, background-color 0.4s
+    &__browse
+        display: block
+        position: relative
+        z-index: 1
+        padding: 10px
+        @include fontMix(#838383, 14px, normal, 300)
+        width: 87px
+        height: 38px
+        background-color: #f9f9f9
+        border: 1px solid #e6e6e6
+        border-radius: 3px 0px 0px 3px
+        transition: color 0.4s, background-color 0.4s
 
-            &[open]
-                background-color: $colorBasic
-                color: #FFF
+        &[open]
+            background-color: $colorBasic
+            color: #FFF
 
-            &:hover
-                background-color: $colorBasic
-                color: #FFF
+        &:hover
+            background-color: $colorBasic
+            color: #FFF
 
-        &__search
-            width: 279px
-            height: 38px
-            border: 1px solid #e6e6e6
-            padding-left: 16px
-            padding-right: 16px
-            @include fontMix(#a4a4a4, 14px, 32px, 300)
-            letter-spacing: 0.025em
-            margin-left: -1px
-            margin-right: -1px
+    &__input
+        width: 279px
+        height: 38px
+        border: 1px solid #e6e6e6
+        padding-left: 16px
+        padding-right: 16px
+        @include fontMix(#a4a4a4, 14px, 32px, 300)
+        letter-spacing: 0.025em
+        margin-left: -1px
+        margin-right: -1px
 
-        &__btn
-            background-color: #fff
-            width: 38px
-            height: 38px
-            border-radius: 0px 3px 3px 0px
-            border: 1px solid #e6e6e6
-            display: flex
-            justify-content: center
-            align-items: center
-            cursor: pointer
-            fill: #a4a4a4
-            transition: color 0.4s, background-color 0.4s
+    &__search
+        background-color: #fff
+        width: 38px
+        height: 38px
+        border-radius: 0px 3px 3px 0px
+        border: 1px solid #e6e6e6
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        fill: #a4a4a4
+        transition: color 0.4s, background-color 0.4s
 
-            &:hover
-                background-color: $colorBasic
-                fill: #fff
+        &:hover
+            background-color: $colorBasic
+            fill: #fff
 
-        &__dropmenu
-            background-color: #fff
-            width: 262px
-            display: flex
-            flex-direction: column
-            gap: 10px
-            padding: 20px
-            position: absolute
-            left: -10px
-            top: 35px
-            cursor: auto
+    &__browsemenu
+        background-color: #fff
+        width: 262px
+        display: flex
+        flex-direction: column
+        gap: 10px
+        padding: 20px
+        position: absolute
+        left: -10px
+        top: 35px
+        cursor: auto
 
-            &__menu
-                display: flex
-                flex-direction: column
-
-            &__title
-                @include fontMix(#232323, 14px, 32px, 400)
-                letter-spacing: 0.025em
-                border-bottom: 1px solid #e6e6e6
-                margin-bottom: 10px
-
-            &__subtitle
-                @include fontMix(#4f4f4f, 14px, 28px, 400)
-                padding-left: 5px
-                transition: color 0.4s
-
-                &:hover
-                    color: $colorBasic
-
-        &__dropmenu:before
+        &:before
             content: '\25B2'
             display: block
             top: -12px
             left: 72px
             position: absolute
             color: white
+
+    &__menu
+        display: flex
+        flex-direction: column
+
+    &__subtitle
+        @include fontMix(#232323, 14px, 32px, 400)
+        letter-spacing: 0.025em
+        border-bottom: 1px solid #e6e6e6
+        margin-bottom: 10px
+
+    &__anchor
+        @include fontMix(#4f4f4f, 14px, 28px, 400)
+        padding-left: 5px
+        transition: color 0.4s
+
+        &:hover
+            color: $colorBasic
 
     &__right
         display: flex
@@ -179,60 +167,10 @@ details[open] summary::before
         color: #FFF
         border: 1px solid #FFF
         transition: color 0.4s, border-color 0.4s, background-color 0.4s
+        font-size: 14px
+        font-weight: 400
+        letter-spacing: 0.025em
 
-        &__text
-            font-size: 14px
-            font-weight: 400
-            letter-spacing: 0.025em
-
-        &__dropmenu
-            display: flex
-            flex-direction: column
-            position: absolute
-            cursor: auto
-            width: 262px
-            background-color: #fff
-            border-radius: 5px
-            padding: 20px
-            top: 50px
-            right: 0
-            gap: 10px
-            z-index: 1
-
-            &__total
-                display: flex
-                justify-content: space-between
-                align-items: center
-                @include fontMix(#222, 16px, 3, 700)
-
-                &__price
-                    font-size: 18px
-
-            &__checkout
-                border: 1px solid $colorBasic
-                padding: 19px
-                display: flex
-                align-content: center
-                justify-content: center
-                @include fontMix($colorBasic, 14px, 1.2, 700)
-                transition: color 0.4s,background-color 0.4s
-
-                &:hover
-                    color: #FFF
-                    background-color: $colorBasic
-
-            &__tocart
-                border: 1px solid #4a4a4a
-                padding: 19px
-                display: flex
-                align-content: center
-                justify-content: center
-                @include fontMix(#4a4a4a, 14px, 1.2, 700)
-                transition: color 0.4s, background-color 0.4s
-
-                &:hover
-                    color: #FFF
-                    background-color: #4a4a4a
         &[open]
             background-color: #FFF
             color: $colorBasic
@@ -243,7 +181,69 @@ details[open] summary::before
             color: $colorBasic
             border: 1px solid $colorBasic
 
-.pay_product
+    &__mymenu
+        display: flex
+        flex-direction: column
+        position: absolute
+        cursor: auto
+        width: 262px
+        background-color: #fff
+        border-radius: 5px
+        padding: 20px
+        top: 50px
+        right: 0
+        gap: 10px
+        z-index: 1
+
+    &__total
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include fontMix(#222, 16px, 3, 700)
+
+    &__price
+        font-size: 18px
+
+    &__checkout
+        border: 1px solid $colorBasic
+        padding: 19px
+        display: flex
+        align-content: center
+        justify-content: center
+        @include fontMix($colorBasic, 14px, 1.2, 700)
+        transition: color 0.4s, background-color 0.4s
+
+        &:hover
+            color: #FFF
+            background-color: $colorBasic
+
+    &__tocart
+        border: 1px solid #4a4a4a
+        padding: 19px
+        display: flex
+        align-content: center
+        justify-content: center
+        @include fontMix(#4a4a4a, 14px, 1.2, 700)
+        transition: color 0.4s, background-color 0.4s
+
+        &:hover
+            color: #FFF
+            background-color: #4a4a4a
+
+/* вложенный селектор (10 + 1 + 1) */
+.logo
+    display: flex
+    align-items: center
+    gap: 13px
+
+    & h2
+        @include fontMix(#222, 27px, 32px, 300)
+        letter-spacing: 0.025em
+
+        & span
+            @include fontMix($colorBasic, 28px, 32px, 900)
+
+.pay
     display: flex
     gap: 14px
     align-items: center
@@ -261,14 +261,14 @@ details[open] summary::before
         gap: 10px
         flex-direction: column
 
-        &__title
-            @include fontMix(#222, 12px, normal, 700)
+    &__title
+        @include fontMix(#222, 12px, normal, 700)
 
-        &__stars
-            fill: orange
+    &__stars
+        fill: orange
 
-        &__price
-            @include fontMix($colorBasic, 13px, normal, 400)
+    &__price
+        @include fontMix($colorBasic, 13px, normal, 400)
 
     &__delete
         fill: #c0c0c0
@@ -278,13 +278,13 @@ details[open] summary::before
             fill: $colorBasic
 
 /* раздел меню  */
-.section_menu
+.nav
     display: flex
     flex-wrap: wrap
     align-items: center
     justify-content: center
 
-    &__list
+    &__menu
         position: relative
 
         &::after, &::before
@@ -308,7 +308,7 @@ details[open] summary::before
             border-bottom-color: white
             border-width: 14px
 
-        &:hover .section_menu__box
+        &:hover .nav__box
             opacity: 1
             visibility: visible
             transition-delay: 0s
@@ -318,18 +318,18 @@ details[open] summary::before
             opacity: 1
             visibility: visible
             transition-delay: 0s
+        /* Сложный селектор к первому anchor */
+        & > a
+            @include fontMix(#222, 14px, normal, 700)
+            cursor: pointer
+            display: block
+            padding: 19px 25px 22px
+            border-bottom: 3px solid white
+            transition: color 0.4s, border-color 0.4s
 
-    &__subtitle
-        @include fontMix(#222, 14px, normal, 700)
-        cursor: pointer
-        display: block
-        padding: 19px 25px 22px
-        border-bottom: 3px solid white
-        transition: color 0.4s, border-color 0.4s
-
-        &:hover
-            color: $colorBasic
-            border-bottom: 3px solid $colorBasic
+            &:hover
+                color: $colorBasic
+                border-bottom: 3px solid $colorBasic
 
     &__box
         background-color: #fff
@@ -345,23 +345,23 @@ details[open] summary::before
         z-index: 2
         display: flex
 
-    &__translateX_13
-        transform: translateX(-130pt)
+        &_translateX-13
+            transform: translateX(-130pt)
 
-    &__translateX_20
-        transform: translateX(-201pt)
+        &_translateX-20
+            transform: translateX(-201pt)
 
-    &__translateX_27
-        transform: translateX(-272pt)
+        &_translateX-27
+            transform: translateX(-272pt)
 
-    &__translateX_35
-        transform: translateX(-356pt)
+        &_translateX-35
+            transform: translateX(-356pt)
 
-    &__translateX_24
-        transform: translateX(-245pt)
+        &_translateX-24
+            transform: translateX(-245pt)
 
-    &__translateX_12
-        transform: translateX(-127pt)
+        &_translateX-12
+            transform: translateX(-127pt)
 
     &__item
         display: flex
@@ -371,27 +371,27 @@ details[open] summary::before
         width: 235px
         margin-right: 45px
 
-        &__title
-            @include fontMix(#232323, 14px, 20px, 400)
-            letter-spacing: 0.025em
-            padding-bottom: 5px
-            border-bottom: 1px solid #e8e8e8
-            margin-bottom: 4px
-
-        &__link
-            @include fontMix(#646464, 14px, 20px, 400)
-            letter-spacing: 0.025em
-            display: block
-            transition: color 0.4s
-
-            &:hover
-                color: $colorBasic
-
         &:last-of-type
             margin-right: 0
 
+    &__dir
+        @include fontMix(#232323, 14px, 20px, 400)
+        letter-spacing: 0.025em
+        padding-bottom: 5px
+        border-bottom: 1px solid #e8e8e8
+        margin-bottom: 4px
+
+    &__link
+        @include fontMix(#646464, 14px, 20px, 400)
+        letter-spacing: 0.025em
+        display: block
+        transition: color 0.4s
+
+        &:hover
+            color: $colorBasic
+
 /* раздел промо */
-.section_promo
+.promo
     display: flex
     flex-direction: column
     background-image: url(../img/promo.jpg)
@@ -423,11 +423,11 @@ details[open] summary::before
     &__subtitle
         @include fontMix(#222, 40px, 0.8, 700)
 
-        &__pink
+        & span
             color: $colorBasic
 
 /* раздел hot */
-.section_hot
+.hot
     display: grid
     grid-template-columns: 1fr 1fr
     grid-template-rows: repeat(3, 261px)
@@ -441,46 +441,46 @@ details[open] summary::before
         background-repeat: no-repeat
         transition: transform 0.2s
 
-        &__name
-            display: flex
-            flex-direction: column
-            position: absolute
-            top: 25px
-            gap: 4px
-            background-color: #fff
-            font-weight: 900
-            letter-spacing: 0.025em
-            padding: 10px 18px
-
-        &__text
-            font-size: 18px
-            color: #222222
-
-        &__title
-            font-size: 30px
-            color: $colorBasic
-
         &:hover
             transform: scale(1.02)
 
-.big_item
-    grid-row: span 2
-    grid-column: span 1
+        &__men
+            background-image: url(../img/men.jpg)
 
-.men
-    background-image: url(../img/men.jpg)
+        &__women
+            background-image: url(../img/women.jpg)
 
-.women
-    background-image: url(../img/women.jpg)
+        &__kid
+            background-image: url(../img/kid.jpg)
 
-.kid
-    background-image: url(../img/kid.jpg)
+        &__accesories
+            background-image: url(../img/accesories.jpg)
 
-.accesories
-    background-image: url(../img/accesories.jpg)
+    &__title
+        display: flex
+        flex-direction: column
+        position: absolute
+        top: 25px
+        gap: 4px
+        background-color: #fff
+        font-weight: 900
+        letter-spacing: 0.025em
+        padding: 10px 18px
+
+    &__text
+        font-size: 18px
+        color: #222222
+
+    &__name
+        font-size: 30px
+        color: $colorBasic
+
+    &__big-item
+        grid-row: span 2
+        grid-column: span 1
 
 /* раздел рекомендуемое */
-.section_featured
+.featured
     margin-top: 100px
 
     &__lead
@@ -488,9 +488,8 @@ details[open] summary::before
         text-align: center
         letter-spacing: 0.025em
 
-    &__lead2
-        @include fontMix(#4d4d4d, 24px, 20px, 900)
-        text-align: center
+        &_mod
+            @include fontMix(#4d4d4d, 24px, 20px, 900)
 
     &__desc
         margin-top: 6px
@@ -510,36 +509,36 @@ details[open] summary::before
         border: 1px solid #FFF
         transition: border 0.4s, background-color 0.4s
 
-        &__cart
-            position: absolute
-            z-index: 1
-            background-color: rgba(0, 0, 0, 0.5)
-            opacity: 0
-            text-align: center
-            top: 30%
-            left: 25%
-            user-select: none
-            transition: opacity 0.2s
-
-            &__add
-                display: flex
-                fill: white
-                gap: 11px
-                border: 2px solid white
-                justify-content: center
-                align-items: center
-                padding: 11px 13px 9px 13px
-                @include fontMix(white, 13px, normal, 700)
-                transition: background-color 0.4s
-
-                &:hover
-                    background-color: $colorBasic
-
         &:hover
             border: 1px solid $colorBasic
 
-        &:hover &__cart
+        &:hover .featured__cart
             opacity: 1
+
+    &__cart
+        position: absolute
+        z-index: 1
+        background-color: rgba(0, 0, 0, 0.5)
+        opacity: 0
+        text-align: center
+        top: 30%
+        left: 25%
+        user-select: none
+        transition: opacity 0.2s
+
+    &__add
+        display: flex
+        fill: white
+        gap: 11px
+        border: 2px solid white
+        justify-content: center
+        align-items: center
+        padding: 11px 13px 9px 13px
+        @include fontMix(white, 13px, normal, 700)
+        transition: background-color 0.4s
+
+        &:hover
+            background-color: $colorBasic
 
     &__content
         display: flex
@@ -637,60 +636,61 @@ details[open] summary::before
         gap: 20px
         @include fontMix(#6f6e6e, 14px, 20px, 700)
 
-        &__title
-            margin-top: 10px
+    &__title
+        margin-top: 10px
 
-        &__trend
-            display: flex
-            flex-wrap: wrap
-            align-items: center
-            width: 200px
-            gap: 10px
+    &__trend
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        width: 200px
+        gap: 10px
 
-            &__title
-                @include fontMix(#6f6e6e, 14px, 14px, 400)
-                transition: color 0.4s
+    &__link
+        @include fontMix(#6f6e6e, 14px, 14px, 400)
+        transition: color 0.4s
 
-                &:hover
-                    color: $colorBasic
+        &:hover
+            color: $colorBasic
 
-                &:not(:first-child)
-                    border-left: 1px solid #6f6e6e
-                    padding-left: 10px
-        &__box1
-            display: flex
-            flex-direction: column
-            gap: 13px
+        &:not(:first-child)
+            border-left: 1px solid #6f6e6e
+            padding-left: 10px
 
-        &__box2
-            display: grid
-            grid-template-columns: repeat(4, 1fr)
-            grid-column-gap: 23px
-            grid-row-gap: 13px
+    &__box-flex
+        display: flex
+        flex-direction: column
+        gap: 13px
 
-        &__check
-            display: flex
-            gap: 9px
-            align-items: center
+    &__box-grid
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-column-gap: 23px
+        grid-row-gap: 13px
 
-            &__text
-                @include fontMix(#6f6e6e, 14px, 16px, 400)
+    &__check
+        display: flex
+        gap: 9px
+        align-items: center
 
-        &__field
-            border-radius: 5px
-            outline: none
-            opacity: 0.7
-            -webkit-transition: .2s
-            transition: opacity .2s
+    &__size
+        @include fontMix(#6f6e6e, 14px, 16px, 400)
 
-            &__text
-                display: flex
-                justify-content: space-between
+    &__field
+        border-radius: 5px
+        outline: none
+        opacity: 0.7
+        -webkit-transition: .2s
+        transition: opacity .2s
 
-        &__min_max
-            display: flex
-            flex-direction: column
-            gap: 13px
+    &__range
+        display: flex
+        justify-content: space-between
+
+    &__min-max
+        display: flex
+        flex-direction: column
+        gap: 13px
 
     &__sort
         display: flex
@@ -701,38 +701,29 @@ details[open] summary::before
         padding: 10px
         background-color: #f3f3f3
 
-        &__box
-            display: flex
-            border-left: 1px solid #ebebeb
-            border-top: 1px solid #ebebeb
-            border-bottom: 1px solid #ebebeb
+    &__box
+        display: flex
+        border-left: 1px solid #ebebeb
+        border-top: 1px solid #ebebeb
+        border-bottom: 1px solid #ebebeb
 
-        &__head
-            height: 30px
-            background-color: #ffffff
-            border-right: 1px solid #ebebeb
-            @include fontMix(#6f6e6e, 14px, 8px, 400)
-            padding: 10px 8px 8px 13px
-            user-select: none
+    &__head
+        height: 30px
+        background-color: #ffffff
+        border-right: 1px solid #ebebeb
+        @include fontMix(#6f6e6e, 14px, 8px, 400)
+        padding: 10px 8px 8px 13px
+        user-select: none
 
-            &[open]
-                color: white
-                background-color: $colorBasic
+        &[open]
+            color: white
+            background-color: $colorBasic
 
-    &__sort_by
+    &__sort-by
         width: 65px
 
     &__show
         width: 45px
-
-    &__category
-        grid-row: span 6
-        grid-column: span 1
-
-    &__footsort
-        grid-row: span 1
-        grid-column: span 3
-        height: 50px
 
     &__footer
         margin-top: 43px
@@ -776,60 +767,68 @@ details[open] summary::before
             color: white
             border: 1px solid white
 
+    &_category
+        grid-row: span 6
+        grid-column: span 1
+
+    &_footsort
+        grid-row: span 1
+        grid-column: span 3
+        height: 50px
+
 .filter
     &__content
         background-color: #fff
         padding-right: 20px
 
-    &__item
-        &__heading
-            @include fontMix(#6F6E6E, 14px, 20px, 700)
-            padding: 8px 11px 11px
-            border-bottom: 1px solid #EBEBEB
-            border-left: 5px solid $colorBasic
+    &__item[open] &__heading
+        color: $colorBasic
 
-        &[open] &__heading
-            color: $colorBasic
+    &__heading
+        @include fontMix(#6F6E6E, 14px, 20px, 700)
+        padding: 8px 11px 11px
+        border-bottom: 1px solid #EBEBEB
+        border-left: 5px solid $colorBasic
+
+    &__box
+        padding: 24px 16px
+        display: flex
+        flex-direction: column
+        gap: 11px
 
     &__link
         @include fontMix(#6F6E6E, 14px, 17px, 400)
         transition: color 0.4s
 
-        &__box
-            padding: 24px 16px
-            display: flex
-            flex-direction: column
-            gap: 11px
-
         &:hover
             color: $colorBasic
 
 /* раздел преимущества */
-.section_benefit
+.benefit
     margin-top: 110px
     display: flex
 
     &__hot
         position: relative
 
-        &__img
-            width: 767px
-            height: 100%
-            filter: brightness(80%)
+    &__img
+        width: 767px
+        height: 100%
+        filter: brightness(80%)
 
-        &__title
-            position: absolute
-            top: 140px
-            left: 40px
-            @include fontMix(white, 54px, 0.7, 700)
-            letter-spacing: 0.025em
-            width: 300px
+    &__title
+        position: absolute
+        top: 140px
+        left: 40px
+        @include fontMix(white, 54px, 0.7, 700)
+        letter-spacing: 0.025em
+        width: 300px
 
-        &__title_d
-            color: $colorBasic
+    &__title-d
+        color: $colorBasic
 
-        &__text
-            font-size: 32px
+    &__text
+        font-size: 32px
 
     &__items
         display: flex
@@ -846,7 +845,7 @@ details[open] summary::before
         justify-content: center
         align-items: flex-start
 
-        &__img
+        & img
             padding-top: 5px
 
     &__article
@@ -854,15 +853,15 @@ details[open] summary::before
         flex-direction: column
         gap: 17px
 
-    &__title
+    &__subtitle
         margin-top: 9px
         @include fontMix(white, 20px, normal, 400)
 
-    &__text
+    &__desc
         @include fontMix(white, 14px, normal, 300)
         width: 220px
 
-.benefit
+.benefit-mini
     margin-top: 95px
     gap: 80px
     background-color: #222224
@@ -872,20 +871,20 @@ details[open] summary::before
     grid-template-columns: 1fr 1fr 1fr
     align-items: center
 
-    &_item
+    &__item
         display: flex
         gap: 16px
         flex-direction: column
         align-items: center
 
-    &_text
+    &__text
         width: 100%
         @include fontMix(white, 14px, 23px, 300)
         text-align: center
         letter-spacing: 0.025em
 
 /* страница продукта */
-.section_single
+.single
     display: flex
     align-items: center
     justify-content: space-between
@@ -909,7 +908,7 @@ details[open] summary::before
             border: 1px solid $colorBasic
 
 /* описание продукта */
-.section_product
+.description
     display: flex
     align-items: center
     flex-direction: column
@@ -947,31 +946,31 @@ details[open] summary::before
         padding-bottom: 40px
         border-bottom: 1px solid #eaeaea
 
-        &__name
-            @include fontMix(#4d4d4d, 18px, 24px, 900)
-            margin-bottom: 40px
+    &__lead
+        @include fontMix(#4d4d4d, 18px, 24px, 900)
+        margin-bottom: 40px
 
-        &__description
-            text-align: center
-            @include fontMix(#5e5e5e, 14px, 24px, 300)
+    &__text
+        text-align: center
+        @include fontMix(#5e5e5e, 14px, 24px, 300)
 
-        &__components
-            display: flex
-            justify-content: center
-            align-items: center
-            gap: 44px
+    &__components
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 44px
 
-            & h5
-                @include fontMix(#b9b9b9, 14px, 24px, 700)
+        & h5
+            @include fontMix(#b9b9b9, 14px, 24px, 700)
 
-            &__material
-                color: #2f2f2f
+    &__material
+        color: #2f2f2f
 
-            &__designer
-                color: #2f2f2f
+    &__designer
+        color: #2f2f2f
 
-        &__price
-            @include fontMix($colorBasic, 24px, 24px, 700)
+    &__price
+        @include fontMix($colorBasic, 24px, 24px, 700)
 
     &__add
         margin-top: 60px
@@ -981,74 +980,74 @@ details[open] summary::before
         justify-content: center
         gap: 28px
 
-        &__filter
-            display: grid
-            grid-template-columns: repeat(3, 1fr)
-            gap: 50px
+    &__filter
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 50px
 
-            &__box
-                display: flex
-                flex-direction: column
-                gap: 10px
+    &__box
+        display: flex
+        flex-direction: column
+        gap: 10px
 
-            &__name
-                @include fontMix(#2f2f2f, 14px, 24px, 700)
+    &__name
+        @include fontMix(#2f2f2f, 14px, 24px, 700)
 
-            &__head
-                height: 35px
-                background-color: #ffffff
-                border: 1px solid #eaeaea
-                @include fontMix(#bcbcbc, 13px, 12px, 400)
-                padding: 10px 8px 8px 13px
-                user-select: none
+    &__head
+        height: 35px
+        background-color: #ffffff
+        border: 1px solid #eaeaea
+        @include fontMix(#bcbcbc, 13px, 12px, 400)
+        padding: 10px 8px 8px 13px
+        user-select: none
 
-            &__color
-                width: 12px
-                height: 12px
-                background-color: #ef5b70
-                float: left
-                margin-right: 10px
+    &__color
+        width: 12px
+        height: 12px
+        background-color: #ef5b70
+        float: left
+        margin-right: 10px
 
-            &_by
-                width: 121px
+    &_by
+        width: 121px
 
-            &__input
-                width: 144px
-                height: 35px
-                background-color: #ffffff
-                border: 1px solid #eaeaea
-                @include fontMix(#bcbcbc, 13px, 12px, 400)
-                padding: 0px 17px
-                user-select: none
+    &__input
+        width: 144px
+        height: 35px
+        background-color: #ffffff
+        border: 1px solid #eaeaea
+        @include fontMix(#bcbcbc, 13px, 12px, 400)
+        padding: 0px 17px
+        user-select: none
 
-        &__btn
-            display: flex
-            align-items: center
-            justify-content: center
-            gap: 15px
-            fill: $colorBasic
-            @include fontMix($colorBasic, 16px, 1.2, 700)
-            border: 1px solid $colorBasic
-            width: 530px
-            height: 55px
-            background-color: #ffffff
-            transition: color 0.4s, fill 0.4s, border 0.4s, background-color 0.4s
+    &__btn
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 15px
+        fill: $colorBasic
+        @include fontMix($colorBasic, 16px, 1.2, 700)
+        border: 1px solid $colorBasic
+        width: 530px
+        height: 55px
+        background-color: #ffffff
+        transition: color 0.4s, fill 0.4s, border 0.4s, background-color 0.4s
 
-            &:hover
-                fill: #fff
-                color: #fff
-                background-color: $colorBasic
-                border: 1px solid #fff
+        &:hover
+            fill: #fff
+            color: #fff
+            background-color: $colorBasic
+            border: 1px solid #fff
 
 /* раздел оформление */
-.section_checkout
+.checkout
     margin-top: 50px
 
     &__box
         border-bottom: 1px solid #e8e8e8
         cursor: default
 
-    &__name
+    &__lead
         @include fontMix(black, 16px, 1.2, 700)
         padding-bottom: 30px
         padding-top: 30px
@@ -1065,84 +1064,84 @@ details[open] summary::before
         justify-content: space-between
         padding: 10px 100px 80px 35px
 
-        &__container
-            display: flex
-            flex-direction: column
-            gap: 10px
-            border: none
+    &__container
+        display: flex
+        flex-direction: column
+        gap: 10px
+        border: none
 
-        &__check_box
-            display: flex
-            flex-direction: column
-            gap: 20px
-            margin-bottom: 20px
-            margin-top: 20px
+    &__check-box
+        display: flex
+        flex-direction: column
+        gap: 20px
+        margin-bottom: 20px
+        margin-top: 20px
 
-        &__check
-            display: flex
-            gap: 14px
-            @include fontMix(black, 12px, 1.2, 400)
+    &__check
+        display: flex
+        gap: 14px
+        @include fontMix(black, 12px, 1.2, 400)
 
-        &__name
-            @include fontMix(black, 13px, 1.2, 400)
+    &__name
+        @include fontMix(black, 13px, 1.2, 400)
 
-        &__desc
-            @include fontMix(#b3b2b2, 13px, 20px, 400)
+    &__desc
+        @include fontMix(#b3b2b2, 13px, 20px, 400)
 
-            & span
-                font-size: 20px
-                line-height: 10px
+        & span
+            font-size: 20px
+            line-height: 10px
 
-        &__desc_red
-            @include fontMix(#ff0d0d, 13px, 20px, 400)
+    &__desc_red
+        @include fontMix(#ff0d0d, 13px, 20px, 400)
 
-        &__input
-            display: flex
-            flex-direction: column
-            gap: 15px
-            @include fontMix(black, 12px, 1.2, 400)
-            margin-top: 20px
+    &__input
+        display: flex
+        flex-direction: column
+        gap: 15px
+        @include fontMix(black, 12px, 1.2, 400)
+        margin-top: 20px
 
-            & em
-                @include fontMix(red, 17px, 10px, 700)
+        & em
+            @include fontMix(red, 17px, 10px, 700)
 
-            & input
-                width: 390px
-                height: 45px
-                padding-left: 20px
-                padding-right: 20px
-                background-color: #ffffff
-                border: 1px solid #eaeaea
-
-        &__forgot
-            display: flex
-            align-items: center
-            gap: 32px
-
-            &__name
-                margin-top: 30px
-                @include fontMix(#222222, 14px, 20px, 400)
-                transition: color 0.4s
-
-                &:hover
-                    color: $colorBasic
-
-        &__btn
-            margin-top: 30px
-            width: 180px
-            height: 50px
-            cursor: pointer
+        & input
+            width: 390px
+            height: 45px
+            padding-left: 20px
+            padding-right: 20px
             background-color: #ffffff
             border: 1px solid #eaeaea
-            @include fontMix(#4a4a4a, 14px, 1.2, 700)
-            transition: border 0.4s, border-color 0.4s, color 0.4s
 
-            &:hover
-                color: #FFF
-                background-color: #4a4a4a
+    &__forgot-box
+        display: flex
+        align-items: center
+        gap: 32px
+
+    &__forgot
+        margin-top: 30px
+        @include fontMix(#222222, 14px, 20px, 400)
+        transition: color 0.4s
+
+        &:hover
+            color: $colorBasic
+
+    &__btn
+        margin-top: 30px
+        width: 180px
+        height: 50px
+        cursor: pointer
+        background-color: #ffffff
+        border: 1px solid #eaeaea
+        @include fontMix(#4a4a4a, 14px, 1.2, 700)
+        transition: border 0.4s, border-color 0.4s, color 0.4s
+
+        &:hover
+            color: #FFF
+            background-color: #4a4a4a
 
 /* раздел подпишись */
-.section_subscribe
+.subscribe
     display: grid
     grid-template-columns: 1fr 1fr
     margin-top: 97px
@@ -1150,23 +1149,23 @@ details[open] summary::before
     justify-content: center
     align-items: center
 
-    &__margin
+    &_margin
         margin-top: 0
 
-.subscribe_back
-    background: linear-gradient(50deg, #ffffff, black), url(../img/background_subscribe.png)
-    background-size: cover
-    background-blend-mode: screen
-    background-repeat: no-repeat
-    background-position: center
+    &_image
+        background: linear-gradient(50deg, #ffffff, black), url(../img/background_subscribe.png)
+        background-size: cover
+        background-blend-mode: screen
+        background-repeat: no-repeat
+        background-position: center
 
-.subscribe_intersect
-    display: flex
-    gap: 30px
-    align-items: center
-    justify-content: center
+    &__intersect
+        display: flex
+        gap: 30px
+        align-items: center
+        justify-content: center
 
-    &__img
+    & img
         width: 96px
 
     &__text
@@ -1185,11 +1184,11 @@ details[open] summary::before
     &__place
         @include fontMix(black, 12px, normal, 400)
 
-.subscribe_subscribe
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    &__form
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
 
     &__title
         text-align: center
@@ -1233,7 +1232,7 @@ details[open] summary::before
             border: 1px solid $colorBasic
 
 /* информация сайта */
-.section_info
+.info
     margin-top: 110px
     margin-bottom: 90px
     display: inline-block
@@ -1242,11 +1241,11 @@ details[open] summary::before
         display: inline-block
         margin-right: 50px
 
-        &__text
-            letter-spacing: 0.025em
-            @include fontMix(#898989, 14px, 24px, 300)
-            width: 430px
-            margin-top: 28px
+    &__desc
+        letter-spacing: 0.025em
+        @include fontMix(#898989, 14px, 24px, 300)
+        width: 430px
+        margin-top: 28px
 
     &__nav
         display: inline-block
@@ -1256,27 +1255,27 @@ details[open] summary::before
         &:last-child
             margin-right: 0
 
-        &__title
-            @include fontMix($colorBasic, 18px, normal, 700)
-            letter-spacing: 0.025em
-            margin-bottom: 45px
+    &__title
+        @include fontMix($colorBasic, 18px, normal, 700)
+        letter-spacing: 0.025em
+        margin-bottom: 45px
 
-        &__menu
-            &__text
-                display: block
-                @include fontMix(#898989, 16px, normal, 400)
-                letter-spacing: 0.025em
-                transition: color 0.4s
-                margin-bottom: 23px
+    &__text
+        display: block
+        @include fontMix(#898989, 16px, normal, 400)
+        letter-spacing: 0.025em
+        transition: color 0.4s
+        margin-bottom: 23px
 
-                &:last-child
-                    margin-bottom: 0
+        &:last-child
+            margin-bottom: 0
 
-                &:hover
-                    color: $colorBasic
+        &:hover
+            color: $colorBasic
 
+/* фолбэки */    
 @supports (display: flex)
-    .section_info
+    .info
         display: flex
 
         &__about
@@ -1287,33 +1286,33 @@ details[open] summary::before
             display: flex
             flex-direction: column
 
-            &__menu
-                display: flex
-                flex-direction: column
+        &__menu
+            display: flex
+            flex-direction: column
 
 @supports (gap: 0)
-    .section_info
+    .info
         gap: 60px
 
         &__about
             gap: 28px
             margin-right: 0
 
-            &__text
-                margin-top: 0
+        &__desc
+            margin-top: 0
 
         &__nav
             gap: 45px
             margin-right: 0
 
-            &__title
-                margin-bottom: 0
+        &__title
+            margin-bottom: 0
 
-            &__menu
-                gap: 23px
+        &__menu
+            gap: 23px
 
-                &__text
-                    margin-bottom: 0
+        &__text
+            margin-bottom: 0
 
 /* подвал сайта */
 .footer

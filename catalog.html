@@ -12,68 +12,65 @@
 </head>
 
 <body>
-    <header class="header_page center">
-        <nav class="header_page__left">
-            <a class="header_page__logo" href="index.html">
+    <header class="header center">
+        <nav class="header__left">
+            <a class="logo" href="index.html">
                 <img src="./img/logo.png" alt="logo">
-                <h1 class="header_page__logo__title">
-                    BRAN<span class="header_page__logo__title_d">D</span>
-                </h1>
+                <h2>BRAN<span>D</span></h2>
             </a>
-            <form class="header_page__forminput" action="#">
-                <details class="header_page__forminput__browse">
-                    <summary class="header_page__forminput__browse__text">Browse</summary>
-                    <nav class="header_page__forminput__dropmenu">
-                        <nav class="header_page__forminput__dropmenu__menu">
-                            <h3 class="header_page__forminput__dropmenu__title">WOMEN</h3>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Dresses</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Tops</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Sweaters/Knits</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Jackets/Coats</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Blazers</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Denim</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Leggings/Pants</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Skirts/Shorts</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Accessories </a>
+            <form class="header__forminput" action="#">
+                <details class="header__browse">
+                    <summary>Browse</summary>
+                    <nav class="header__browsemenu">
+                        <nav class="header__menu">
+                            <h3 class="header__subtitle">WOMEN</h3>
+                            <a class="header__anchor" href="#">Dresses</a>
+                            <a class="header__anchor" href="#">Tops</a>
+                            <a class="header__anchor" href="#">Sweaters/Knits</a>
+                            <a class="header__anchor" href="#">Jackets/Coats</a>
+                            <a class="header__anchor" href="#">Blazers</a>
+                            <a class="header__anchor" href="#">Denim</a>
+                            <a class="header__anchor" href="#">Leggings/Pants</a>
+                            <a class="header__anchor" href="#">Skirts/Shorts</a>
+                            <a class="header__anchor" href="#">Accessories </a>
                         </nav>
-                        <nav class="header_page__forminput__dropmenu__menu">
-                            <h3 class="header_page__forminput__dropmenu__title">MEN</h3>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Tees/Tank tops</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Shirts/Polos</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Sweaters</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Sweatshirts/Hoodies</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Blazers</a>
-                            <a class="header_page__forminput__dropmenu__subtitle" href="#">Jackets/vests</a>
+                        <nav class="header__menu">
+                            <h3 class="header__subtitle">MEN</h3>
+                            <a class="header__anchor" href="#">Tees/Tank tops</a>
+                            <a class="header__anchor" href="#">Shirts/Polos</a>
+                            <a class="header__anchor" href="#">Sweaters</a>
+                            <a class="header__anchor" href="#">Sweatshirts/Hoodies</a>
+                            <a class="header__anchor" href="#">Blazers</a>
+                            <a class="header__anchor" href="#">Jackets/vests</a>
                         </nav>
                     </nav>
                 </details>
                 <label for="search"></label>
-                <input class="header_page__forminput__search" placeholder="Search for Item..." id="search"
-                    type="search">
-                <button class="header_page__forminput__btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                <input class="header__input" placeholder="Search for Item..." id="search" type="search">
+                <button class="header__search">
+                    <svg viewBox="0 0 24 24" width="14">
                         <path
                             d="M18.9,16.776A10.539,10.539,0,1,0,16.776,18.9l5.1,5.1L24,21.88ZM10.5,18A7.5,7.5,0,1,1,18,10.5,7.507,7.507,0,0,1,10.5,18Z" />
                     </svg>
                 </button>
             </form>
         </nav>
-        <nav class="header_page__right">
-            <a class="header_page__cart" href="#">
+        <nav class="header__right">
+            <a class="header__cart" href="#">
                 <svg width="32" height="29" viewBox="0 0 32 29">
                     <path
                         d="M26.1998 29C25.5521 28.9738 24.9404 28.6948 24.4961 28.2227C24.0518 27.7506 23.8103 27.1232 23.8234 26.475C23.8365 25.8269 24.1032 25.2097 24.5662 24.7559C25.0292 24.3022 25.6516 24.048 26.2999 24.048C26.9482 24.048 27.5706 24.3022 28.0336 24.7559C28.4966 25.2097 28.7633 25.8269 28.7764 26.475C28.7895 27.1232 28.5479 27.7506 28.1036 28.2227C27.6593 28.6948 27.0477 28.9738 26.3999 29H26.1998ZM6.75183 26.32C6.75183 25.79 6.90901 25.2718 7.20349 24.8311C7.49797 24.3904 7.91654 24.0469 8.40625 23.844C8.89596 23.6412 9.43484 23.5881 9.95471 23.6915C10.4746 23.7949 10.9521 24.0502 11.3269 24.425C11.7017 24.7998 11.957 25.2773 12.0604 25.7972C12.1638 26.317 12.1107 26.8559 11.9078 27.3456C11.705 27.8353 11.3615 28.2539 10.9208 28.5483C10.4801 28.8428 9.96194 29 9.43188 29C9.07977 29.0003 8.73102 28.9311 8.40564 28.7966C8.08026 28.662 7.7846 28.4646 7.53552 28.2158C7.28645 27.9669 7.08891 27.6713 6.9541 27.3461C6.81929 27.0208 6.74988 26.6721 6.74988 26.32H6.75183ZM10.5519 20.686C10.2924 20.6868 10.0398 20.6024 9.83301 20.4457C9.62617 20.2891 9.47648 20.0689 9.40686 19.819L4.57385 2.36401H1.18091C0.867422 2.36401 0.566761 2.23947 0.345093 2.01781C0.123425 1.79614 -0.00109863 1.49549 -0.00109863 1.18201C-0.00109863 0.868519 0.123425 0.567873 0.345093 0.346205C0.566761 0.124537 0.867422 5.81268e-06 1.18091 5.81268e-06H5.46191C5.7214 -0.00080736 5.97394 0.0837201 6.18066 0.240568C6.38739 0.397416 6.53674 0.617884 6.60583 0.868006L11.4388 18.323H24.6168L28.9999 8.27501H14.3999C14.2417 8.27961 14.0843 8.25242 13.9368 8.19507C13.7893 8.13771 13.6548 8.05134 13.5413 7.94108C13.4277 7.83082 13.3375 7.69891 13.2759 7.55315C13.2143 7.40739 13.1825 7.25075 13.1825 7.0925C13.1825 6.93426 13.2143 6.77762 13.2759 6.63186C13.3375 6.4861 13.4277 6.35419 13.5413 6.24393C13.6548 6.13367 13.7893 6.0473 13.9368 5.98994C14.0843 5.93259 14.2417 5.90541 14.3999 5.91001H30.8129C31.0086 5.90996 31.2011 5.95866 31.3733 6.05172C31.5454 6.14478 31.6917 6.27926 31.7988 6.44301C31.9067 6.60729 31.9723 6.79569 31.9897 6.99145C32.0072 7.18721 31.976 7.38424 31.8989 7.565L26.4939 19.977C26.4015 20.1876 26.2499 20.3668 26.0574 20.4927C25.8649 20.6186 25.6399 20.6858 25.4099 20.686H10.5519Z" />
                 </svg>
             </a>
-            <details class="header_page__myaccount">
-                <summary class="header_page__myaccount__text">My Account</summary>
-                <nav class="header_page__myaccount__dropmenu">
-                    <div class="pay_product">
-                        <a class="pay_product__cart" href="#">
+            <details class="header__myaccount">
+                <summary>My Account</summary>
+                <nav class="header__mymenu">
+                    <div class="pay">
+                        <a class="pay__cart" href="single_page.html">
                             <img src="img/product9.jpg" alt="product">
-                            <div class="pay_product__content">
-                                <h4 class="pay_product__content__title">REBOX ZANE</h4>
-                                <p class="pay_product__content__stars">
+                            <div class="pay__content">
+                                <h4 class="pay__title">REBOX ZANE</h4>
+                                <p class="pay__stars">
                                     <svg viewBox="0 0 24 24" width="15">
                                         <path
                                             d="M1.327,12.4,4.887,15,3.535,19.187A3.178,3.178,0,0,0,4.719,22.8a3.177,3.177,0,0,0,3.8-.019L12,20.219l3.482,2.559a3.227,3.227,0,0,0,4.983-3.591L19.113,15l3.56-2.6a3.227,3.227,0,0,0-1.9-5.832H16.4L15.073,2.432a3.227,3.227,0,0,0-6.146,0L7.6,6.568H3.231a3.227,3.227,0,0,0-1.9,5.832Z" />
@@ -95,22 +92,22 @@
                                             d="m23.816,8.589c-.495-1.52-1.848-2.502-3.446-2.502h-3.772l-1.145-3.57c-.491-1.529-1.847-2.517-3.453-2.517s-2.962.988-3.454,2.519l-1.144,3.568h-3.772c-1.599,0-2.951.981-3.446,2.501-.496,1.52.018,3.11,1.307,4.052l3.08,2.252-1.169,3.618c-.493,1.527.028,3.119,1.329,4.056,1.279.922,2.994.917,4.27-.02l3-2.207,3,2.205c.651.48,1.399.72,2.148.72.737,0,1.475-.232,2.12-.697,1.302-.938,1.823-2.53,1.33-4.056l-1.169-3.619,3.079-2.251c1.29-.942,1.804-2.532,1.308-4.051Zm-3.078,1.629l-3.955,2.892c-.522.382-.74,1.056-.542,1.672l1.503,4.651c.093.287.016.522-.229.699-.247.177-.493.175-.736-.004l-3.89-2.859c-.265-.194-.576-.292-.889-.292V3c.303,0,.504.146.596.434l1.479,4.611c.199.621.776,1.042,1.429,1.042h4.867c.301,0,.501.145.595.432.093.286.018.521-.227.699Z" />
                                     </svg>
                                 </p>
-                                <p class="pay_product__content__price">1 x $250</p>
+                                <p class="pay__price">1 x $250</p>
                             </div>
                         </a>
-                        <a class="pay_product__delete" href="#">
-                            <svg viewBox="0 0 24 24" width="15" fill="#c0c0c0">
+                        <a class="pay__delete" href="#">
+                            <svg viewBox="0 0 24 24" width="15">
                                 <path
                                     d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm4.765,16.105c.356.423.302,1.054-.12,1.409-.188.158-.417.235-.644.235-.285,0-.568-.121-.766-.355l-3.235-3.842-3.235,3.842c-.197.234-.48.355-.766.355-.227,0-.456-.077-.644-.235-.422-.355-.477-.986-.12-1.409l3.457-4.105-3.457-4.105c-.356-.423-.302-1.054.12-1.409.423-.357,1.055-.301,1.409.12l3.235,3.842,3.235-3.842c.354-.42.986-.477,1.409-.12.422.355.477.986.12,1.409l-3.457,4.105,3.457,4.105Z" />
                             </svg>
                         </a>
                     </div>
-                    <div class="pay_product">
-                        <a class="pay_product__cart" href="#">
+                    <div class="pay">
+                        <a class="pay__cart" href="single_page.html">
                             <img src="img/product10.jpg" alt="product">
-                            <div class="pay_product__content">
-                                <h4 class="pay_product__content__title">REBOX ZANE</h4>
-                                <p class="pay_product__content__stars">
+                            <div class="pay__content">
+                                <h4 class="pay__title">REBOX ZANE</h4>
+                                <p class="pay__stars">
                                     <svg viewBox="0 0 24 24" width="15">
                                         <path
                                             d="M1.327,12.4,4.887,15,3.535,19.187A3.178,3.178,0,0,0,4.719,22.8a3.177,3.177,0,0,0,3.8-.019L12,20.219l3.482,2.559a3.227,3.227,0,0,0,4.983-3.591L19.113,15l3.56-2.6a3.227,3.227,0,0,0-1.9-5.832H16.4L15.073,2.432a3.227,3.227,0,0,0-6.146,0L7.6,6.568H3.231a3.227,3.227,0,0,0-1.9,5.832Z" />
@@ -132,212 +129,212 @@
                                             d="m23.816,8.589c-.495-1.52-1.848-2.502-3.446-2.502h-3.772l-1.145-3.57c-.491-1.529-1.847-2.517-3.453-2.517s-2.962.988-3.454,2.519l-1.144,3.568h-3.772c-1.599,0-2.951.981-3.446,2.501-.496,1.52.018,3.11,1.307,4.052l3.08,2.252-1.169,3.618c-.493,1.527.028,3.119,1.329,4.056,1.279.922,2.994.917,4.27-.02l3-2.207,3,2.205c.651.48,1.399.72,2.148.72.737,0,1.475-.232,2.12-.697,1.302-.938,1.823-2.53,1.33-4.056l-1.169-3.619,3.079-2.251c1.29-.942,1.804-2.532,1.308-4.051Zm-3.078,1.629l-3.955,2.892c-.522.382-.74,1.056-.542,1.672l1.503,4.651c.093.287.016.522-.229.699-.247.177-.493.175-.736-.004l-3.89-2.859c-.265-.194-.576-.292-.889-.292V3c.303,0,.504.146.596.434l1.479,4.611c.199.621.776,1.042,1.429,1.042h4.867c.301,0,.501.145.595.432.093.286.018.521-.227.699Z" />
                                     </svg>
                                 </p>
-                                <p class="pay_product__content__price">1 x $250</p>
+                                <p class="pay__price">1 x $250</p>
                             </div>
                         </a>
-                        <a class="pay_product__delete" href="#">
-                            <svg viewBox="0 0 24 24" width="15" fill="#c0c0c0">
+                        <a class="pay__delete" href="#">
+                            <svg viewBox="0 0 24 24" width="15">
                                 <path
                                     d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm4.765,16.105c.356.423.302,1.054-.12,1.409-.188.158-.417.235-.644.235-.285,0-.568-.121-.766-.355l-3.235-3.842-3.235,3.842c-.197.234-.48.355-.766.355-.227,0-.456-.077-.644-.235-.422-.355-.477-.986-.12-1.409l3.457-4.105-3.457-4.105c-.356-.423-.302-1.054.12-1.409.423-.357,1.055-.301,1.409.12l3.235,3.842,3.235-3.842c.354-.42.986-.477,1.409-.12.422.355.477.986.12,1.409l-3.457,4.105,3.457,4.105Z" />
                             </svg>
                         </a>
                     </div>
-                    <div class="header_page__myaccount__dropmenu__total">
+                    <div class="header__total">
                         <h3>TOTAL</h3>
-                        <p class="header_page__myaccount__dropmenu__total__price">$500.00</p>
+                        <p class="header__price">$500.00</p>
                     </div>
-                    <a class="header_page__myaccount__dropmenu__checkout" href="checkout.html">CHECKOUT</a>
-                    <a class="header_page__myaccount__dropmenu__tocart" href="#">GO TO CART</a>
+                    <a class="header__checkout" href="checkout.html">CHECKOUT</a>
+                    <a class="header__tocart" href="#">GO TO CART</a>
                 </nav>
             </details>
         </nav>
     </header>
-    <nav class="section_menu center">
-        <li class="section_menu__list">
-            <a class="section_menu__subtitle" href="index.html">HOME</a>
+    <nav class="nav center">
+        <li class="nav__menu">
+            <a href="index.html">HOME</a>
         </li>
-        <li class="section_menu__list">
-            <a class="section_menu__subtitle">MAN</a>
-            <div class="section_menu__box section_menu__translateX_13">
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">MAN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <a class="section_menu__item__link" href="">Blazers</a>
-                    <a class="section_menu__item__link" href="">Denim</a>
-                    <a class="section_menu__item__link" href="">Leggings/Patns</a>
-                    <a class="section_menu__item__link" href="">Skirts/Shorts</a>
-                    <a class="section_menu__item__link" href="">Accessories</a>
+        <li class="nav__menu">
+            <a>MAN</a>
+            <div class="nav__box nav__box_translateX-13">
+                <div class="nav__item">
+                    <h3 class="nav__dir">MAN</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                    <a class="nav__link" href="#">Blazers</a>
+                    <a class="nav__link" href="#">Denim</a>
+                    <a class="nav__link" href="#">Leggings/Patns</a>
+                    <a class="nav__link" href="#">Skirts/Shorts</a>
+                    <a class="nav__link" href="#">Accessories</a>
                 </div>
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">MAN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <h3 class="section_menu__item__title"> <br>MAN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
+                <div class="nav__item">
+                    <h3 class="nav__dir">MAN</h3>
+                    <a class="nav__link" href="">Dresses</a>
+                    <a class="nav__link" href="">Tops</a>
+                    <a class="nav__link" href="">Sweaters/knits</a>
+                    <a class="nav__link" href="">Jackets/Coats</a>
+                    <h3 class="nav__dir"><br>MAN</h3>
+                    <a class="nav__link" href="">Dresses</a>
+                    <a class="nav__link" href="">Tops</a>
+                    <a class="nav__link" href="">Sweaters/knits</a>
                 </div>
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">MAN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
+                <div class="nav__item">
+                    <h3 class="nav__dir">MAN</h3>
+                    <a class="nav__link" href="">Dresses</a>
+                    <a class="nav__link" href="">Tops</a>
+                    <a class="nav__link" href="">Sweaters/knits</a>
+                    <a class="nav__link" href="">Jackets/Coats</a>
                 </div>
             </div>
         </li>
-        <li class="section_menu__list">
-            <a class="section_menu__subtitle">WOMEN</a>
-            <div class="section_menu__box section_menu__translateX_20">
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">WOMEN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <a class="section_menu__item__link" href="">Blazers</a>
-                    <a class="section_menu__item__link" href="">Denim</a>
-                    <a class="section_menu__item__link" href="">Leggings/Patns</a>
-                    <a class="section_menu__item__link" href="">Skirts/Shorts</a>
-                    <a class="section_menu__item__link" href="">Accessories</a>
+        <li class="nav__menu">
+            <a>WOMEN</a>
+            <div class="nav__box nav__box_translateX-20">
+                <div class="nav__item">
+                    <h3 class="nav__dir">WOMEN</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                    <a class="nav__link" href="#">Blazers</a>
+                    <a class="nav__link" href="#">Denim</a>
+                    <a class="nav__link" href="#">Leggings/Patns</a>
+                    <a class="nav__link" href="#">Skirts/Shorts</a>
+                    <a class="nav__link" href="#">Accessories</a>
                 </div>
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">WOMEN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <h3 class="section_menu__item__title"> <br>MAN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
+                <div class="nav__item">
+                    <h3 class="nav__dir">WOMEN</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                    <h3 class="nav__dir"> <br>MAN</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
                 </div>
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">WOMEN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                </div>
-            </div>
-        </li>
-        <li class="section_menu__list">
-            <a class="section_menu__subtitle">KIDS</a>
-            <div class="section_menu__box section_menu__translateX_27">
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">KIDS</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <a class="section_menu__item__link" href="">Blazers</a>
-                    <a class="section_menu__item__link" href="">Denim</a>
-                    <a class="section_menu__item__link" href="">Leggings/Patns</a>
-                    <a class="section_menu__item__link" href="">Skirts/Shorts</a>
-                    <a class="section_menu__item__link" href="">Accessories</a>
-                </div>
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">KIDS</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <h3 class="section_menu__item__title"> <br>MAN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                </div>
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">KIDS</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
+                <div class="nav__item">
+                    <h3 class="nav__dir">WOMEN</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
                 </div>
             </div>
         </li>
-        <li class="section_menu__list">
-            <a class="section_menu__subtitle">ACCOSERIESE</a>
-            <div class="section_menu__box section_menu__translateX_35">
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">ACCOSERIESE</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <a class="section_menu__item__link" href="">Blazers</a>
-                    <a class="section_menu__item__link" href="">Denim</a>
-                    <a class="section_menu__item__link" href="">Leggings/Patns</a>
-                    <a class="section_menu__item__link" href="">Skirts/Shorts</a>
-                    <a class="section_menu__item__link" href="">Accessories</a>
+        <li class="nav__menu">
+            <a>KIDS</a>
+            <div class="nav__box nav__box_translateX-27">
+                <div class="nav__item">
+                    <h3 class="nav__dir">KIDS</h3>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                    <a class="nav__link" href="#">Blazers</a>
+                    <a class="nav__link" href="#">Denim</a>
+                    <a class="nav__link" href="#">Leggings/Patns</a>
+                    <a class="nav__link" href="#">Skirts/Shorts</a>
+                    <a class="nav__link" href="#">Accessories</a>
                 </div>
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">ACCOSERIESE</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <h3 class="section_menu__item__title"> <br>MAN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
+                <div class="nav__item">
+                    <h3 class="nav__dir">KIDS</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                    <h3 class="nav__dir"><br>MAN</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
                 </div>
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">ACCOSERIESE</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                </div>
-            </div>
-        </li>
-        <li class="section_menu__list">
-            <a class="section_menu__subtitle">FEATURED</a>
-            <div class="section_menu__box section_menu__translateX_24">
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">FEATURED</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <a class="section_menu__item__link" href="">Blazers</a>
-                    <a class="section_menu__item__link" href="">Denim</a>
-                    <a class="section_menu__item__link" href="">Leggings/Patns</a>
-                    <a class="section_menu__item__link" href="">Skirts/Shorts</a>
-                    <a class="section_menu__item__link" href="">Accessories</a>
-                </div>
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">FEATURED</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <h3 class="section_menu__item__title"> <br>MAN</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
+                <div class="nav__item">
+                    <h3 class="nav__dir">KIDS</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
                 </div>
             </div>
         </li>
-        <li class="section_menu__list">
-            <a class="section_menu__subtitle">HOT DEALS</a>
-            <div class="section_menu__box section_menu__translateX_12">
-                <div class="section_menu__item">
-                    <h3 class="section_menu__item__title">HOT DEALS</h3>
-                    <a class="section_menu__item__link" href="">Dresses</a>
-                    <a class="section_menu__item__link" href="">Tops</a>
-                    <a class="section_menu__item__link" href="">Sweaters/knits</a>
-                    <a class="section_menu__item__link" href="">Jackets/Coats</a>
-                    <a class="section_menu__item__link" href="">Blazers</a>
-                    <a class="section_menu__item__link" href="">Denim</a>
-                    <a class="section_menu__item__link" href="">Leggings/Patns</a>
-                    <a class="section_menu__item__link" href="">Skirts/Shorts</a>
-                    <a class="section_menu__item__link" href="">Accessories</a>
+        <li class="nav__menu">
+            <a>ACCOSERIESE</a>
+            <div class="nav__box nav__box_translateX-35">
+                <div class="nav__item">
+                    <h3 class="nav__dir">ACCOSERIESE</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                    <a class="nav__link" href="#">Blazers</a>
+                    <a class="nav__link" href="#">Denim</a>
+                    <a class="nav__link" href="#">Leggings/Patns</a>
+                    <a class="nav__link" href="#">Skirts/Shorts</a>
+                    <a class="nav__link" href="#">Accessories</a>
+                </div>
+                <div class="nav__item">
+                    <h3 class="nav__dir">ACCOSERIESE</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                    <h3 class="nav__dir"><br>MAN</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                </div>
+                <div class="nav__item">
+                    <h3 class="nav__dir">ACCOSERIESE</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                </div>
+            </div>
+        </li>
+        <li class="nav__menu">
+            <a>FEATURED</a>
+            <div class="nav__box nav__box_translateX-24">
+                <div class="nav__item">
+                    <h3 class="nav__dir">FEATURED</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                    <a class="nav__link" href="#">Blazers</a>
+                    <a class="nav__link" href="#">Denim</a>
+                    <a class="nav__link" href="#">Leggings/Patns</a>
+                    <a class="nav__link" href="#">Skirts/Shorts</a>
+                    <a class="nav__link" href="#">Accessories</a>
+                </div>
+                <div class="nav__item">
+                    <h3 class="nav__dir">FEATURED</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                    <h3 class="nav__dir"><br>MAN</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                </div>
+            </div>
+        </li>
+        <li class="nav__menu">
+            <a>HOT DEALS</a>
+            <div class="nav__box nav__box_translateX-12">
+                <div class="nav__item">
+                    <h3 class="nav__dir">HOT DEALS</h3>
+                    <a class="nav__link" href="#">Dresses</a>
+                    <a class="nav__link" href="#">Tops</a>
+                    <a class="nav__link" href="#">Sweaters/knits</a>
+                    <a class="nav__link" href="#">Jackets/Coats</a>
+                    <a class="nav__link" href="#">Blazers</a>
+                    <a class="nav__link" href="#">Denim</a>
+                    <a class="nav__link" href="#">Leggings/Patns</a>
+                    <a class="nav__link" href="#">Skirts/Shorts</a>
+                    <a class="nav__link" href="#">Accessories</a>
                 </div>
             </div>
         </li>
@@ -350,11 +347,11 @@
             <a href="#" class="breadcrumbs__link breadcrumbs__link_site">NEW ARRIVALS</a>
         </nav>
     </section>
-    <section class="product-box center">
-        <div class="filter__content product-box__category">
+    <main class="product-box center">
+        <div class="filter__content product-box_category">
             <details open class="filter__item">
-                <summary class="filter__item__heading">CATEGORY</summary>
-                <div class="filter__link__box">
+                <summary class="filter__heading">CATEGORY</summary>
+                <div class="filter__box">
                     <a class="filter__link" href="#">Accessories</a>
                     <a class="filter__link" href="#">Bags</a>
                     <a class="filter__link" href="#">Denim</a>
@@ -369,8 +366,8 @@
                 </div>
             </details>
             <details class="filter__item">
-                <summary class="filter__item__heading">BRAND</summary>
-                <div class="filter__link__box">
+                <summary class="filter__heading">BRAND</summary>
+                <div class="filter__box">
                     <a class="filter__link" href="#">Accessories</a>
                     <a class="filter__link" href="#">Bags</a>
                     <a class="filter__link" href="#">Denim</a>
@@ -385,8 +382,8 @@
                 </div>
             </details>
             <details class="filter__item">
-                <summary class="filter__item__heading">DESIGNER</summary>
-                <div class="filter__link__box">
+                <summary class="filter__heading">DESIGNER</summary>
+                <div class="filter__box">
                     <a class="filter__link" href="#">Accessories</a>
                     <a class="filter__link" href="#">Bags</a>
                     <a class="filter__link" href="#">Denim</a>
@@ -402,80 +399,80 @@
             </details>
         </div>
         <div class="product-box__filter">
-            <h4 class="product-box__filter__title">TRENDING NOW</h4>
-            <div class="product-box__filter__box1">
-                <div class="product-box__filter__trend">
-                    <a class="product-box__filter__trend__title" href="#">Bohemian</a>
-                    <a class="product-box__filter__trend__title" href="#">Floral</a>
-                    <a class="product-box__filter__trend__title" href="#">Lace</a>
+            <h4 class="product-box__title">TRENDING NOW</h4>
+            <div class="product-box__box-flex">
+                <div class="product-box__trend">
+                    <a class="product-box__link" href="#">Bohemian</a>
+                    <a class="product-box__link" href="#">Floral</a>
+                    <a class="product-box__link" href="#">Lace</a>
                 </div>
-                <div class="product-box__filter__trend">
-                    <a class="product-box__filter__trend__title" href="#">Floral</a>
-                    <a class="product-box__filter__trend__title" href="#">Lace</a>
-                    <a class="product-box__filter__trend__title" href="#">Bohemian</a>
+                <div class="product-box__trend">
+                    <a class="product-box__link" href="#">Floral</a>
+                    <a class="product-box__link" href="#">Lace</a>
+                    <a class="product-box__link" href="#">Bohemian</a>
                 </div>
             </div>
         </div>
         <div class="product-box__filter">
-            <h4 class="product-box__filter__title">SIZE</h4>
-            <div class="product-box__filter__box2">
-                <div class="product-box__filter__check">
+            <h4 class="product-box__title">SIZE</h4>
+            <div class="product-box__box-grid">
+                <div class="product-box__check">
                     <input id="sort__check_xxs" type="checkbox">
-                    <label class="product-box__filter__check__text" for="sort__check_xxs">XXS</label>
+                    <label class="product-box__size" for="sort__check_xxs">XXS</label>
                 </div>
-                <div class="product-box__filter__check">
+                <div class="product-box__check">
                     <input id="sort__check_xs" type="checkbox">
-                    <label class="product-box__filter__check__text" for="sort__check_xs">XS</label>
+                    <label class="product-box__size" for="sort__check_xs">XS</label>
                 </div>
-                <div class="product-box__filter__check">
+                <div class="product-box__check">
                     <input id="sort__check_s" type="checkbox">
-                    <label class="product-box__filter__check__text" for="sort__check_s">S</label>
+                    <label class="product-box__size" for="sort__check_s">S</label>
                 </div>
-                <div class="product-box__filter__check">
+                <div class="product-box__check">
                     <input id="sort__check_m" type="checkbox">
-                    <label class="product-box__filter__check__text" for="sort__check_m">M</label>
+                    <label class="product-box__size" for="sort__check_m">M</label>
                 </div>
-                <div class="product-box__filter__check">
+                <div class="product-box__check">
                     <input id="sort__check_l" type="checkbox">
-                    <label class="product-box__filter__check__text" for="sort__check_l">L</label>
+                    <label class="product-box__size" for="sort__check_l">L</label>
                 </div>
-                <div class="product-box__filter__check">
+                <div class="product-box__check">
                     <input id="sort__check_xl" type="checkbox">
-                    <label class="product-box__filter__check__text" for="sort__check_xl">XL</label>
+                    <label class="product-box__size" for="sort__check_xl">XL</label>
                 </div>
-                <div class="product-box__filter__check">
+                <div class="product-box__check">
                     <input id="sort__check_xxl" type="checkbox">
-                    <label class="product-box__filter__check__text" for="sort__check_xxl">XXL</label>
+                    <label class="product-box__size" for="sort__check_xxl">XXL</label>
                 </div>
             </div>
         </div>
         <div class="product-box__filter">
-            <h4 class="product-box__filter__title">PRICE</h4>
-            <div class="product-box__filter__min_max">
-                <input class="product-box__filter__field" min="52" max="400" type="range">
-                <div class="product-box__filter__field__text">
+            <h4 class="product-box__title">PRICE</h4>
+            <div class="product-box__min-max">
+                <input class="product-box__field" min="52" max="400" type="range">
+                <div class="product-box__range">
                     <span>$52</span>
                     <span>$400</span>
                 </div>
             </div>
         </div>
-        <div class="product-box__sort product-box__footsort">
-            <div class="product-box__sort__box">
-                <nav class="product-box__sort__head">Sort By</nav>
-                <details class="product-box__sort__head">
-                    <summary class="product-box__sort_by">Name</summary>
+        <div class="product-box__sort product-box_footsort">
+            <div class="product-box__box">
+                <nav class="product-box__head">Sort By</nav>
+                <details class="product-box__head">
+                    <summary class="product-box__sort-by">Name</summary>
                 </details>
             </div>
-            <div class="product-box__sort__box">
-                <nav class="product-box__sort__head">Show</nav>
-                <details class="product-box__sort__head">
+            <div class="product-box__box">
+                <nav class="product-box__head">Show</nav>
+                <details class="product-box__head">
                     <summary class="product-box__show">09</summary>
                 </details>
             </div>
         </div>
-        <div class="section_featured__item">
-            <a class="section_featured__item__cart" href="#">
-                <div class="section_featured__item__cart__add">
+        <div class="featured__item">
+            <a class="featured__cart" href="#">
+                <div class="featured__add">
                     <svg width="27" height="25" viewBox="0 0 27 25">
                         <path
                             d="M21.9521 23.2662H21.8397C21.2306 23.2662 20.7188 22.7666 20.6746 22.1289C20.6302 21.4602 21.1187 20.8781 21.7637 20.8341C21.7891 20.8324 21.8156 20.8315 21.8417 20.8315C22.4587 20.8315 22.9755 21.3214 23.0213 21.9482C23.0331 22.1967 22.9926 22.5509 22.7371 22.8434L22.7312 22.8502L22.7254 22.8571C22.5287 23.0907 22.2619 23.2316 21.9521 23.2662ZM8.22003 23.2599C7.56946 23.2599 7.04022 22.7169 7.04022 22.0496C7.04022 21.3827 7.56946 20.8401 8.22003 20.8401C8.87061 20.8401 9.39984 21.3827 9.39984 22.0496C9.39984 22.7169 8.87061 23.2599 8.22003 23.2599Z" />
@@ -487,15 +484,15 @@
                     <p>Add to Cart</p>
                 </div>
             </a>
-            <a class="section_featured__content" href="single_page.html">
+            <a class="featured__content" href="single_page.html">
                 <img src="img/product11.jpg" alt="product1">
-                <h3 class="section_featured__title">MANGO PEOPLE T-SHIRT</h3>
-                <p class="section_featured__price">$52.00</p>
+                <h3 class="featured__title">MANGO PEOPLE T-SHIRT</h3>
+                <p class="featured__price">$52.00</p>
             </a>
         </div>
-        <div class="section_featured__item">
-            <a class="section_featured__item__cart" href="#">
-                <div class="section_featured__item__cart__add">
+        <div class="featured__item">
+            <a class="featured__cart" href="#">
+                <div class="featured__add">
                     <svg width="27" height="25" viewBox="0 0 27 25">
                         <path
                             d="M21.9521 23.2662H21.8397C21.2306 23.2662 20.7188 22.7666 20.6746 22.1289C20.6302 21.4602 21.1187 20.8781 21.7637 20.8341C21.7891 20.8324 21.8156 20.8315 21.8417 20.8315C22.4587 20.8315 22.9755 21.3214 23.0213 21.9482C23.0331 22.1967 22.9926 22.5509 22.7371 22.8434L22.7312 22.8502L22.7254 22.8571C22.5287 23.0907 22.2619 23.2316 21.9521 23.2662ZM8.22003 23.2599C7.56946 23.2599 7.04022 22.7169 7.04022 22.0496C7.04022 21.3827 7.56946 20.8401 8.22003 20.8401C8.87061 20.8401 9.39984 21.3827 9.39984 22.0496C9.39984 22.7169 8.87061 23.2599 8.22003 23.2599Z" />
@@ -507,15 +504,15 @@
                     <p>Add to Cart</p>
                 </div>
             </a>
-            <a class="section_featured__content" href="single_page.html">
+            <a class="featured__content" href="single_page.html">
                 <img src="img/product12.jpg" alt="product1">
-                <h3 class="section_featured__title">MANGO PEOPLE T-SHIRT</h3>
-                <p class="section_featured__price">$52.00</p>
+                <h3 class="featured__title">MANGO PEOPLE T-SHIRT</h3>
+                <p class="featured__price">$52.00</p>
             </a>
         </div>
-        <div class="section_featured__item">
-            <a class="section_featured__item__cart" href="#">
-                <div class="section_featured__item__cart__add">
+        <div class="featured__item">
+            <a class="featured__cart" href="#">
+                <div class="featured__add">
                     <svg width="27" height="25" viewBox="0 0 27 25">
                         <path
                             d="M21.9521 23.2662H21.8397C21.2306 23.2662 20.7188 22.7666 20.6746 22.1289C20.6302 21.4602 21.1187 20.8781 21.7637 20.8341C21.7891 20.8324 21.8156 20.8315 21.8417 20.8315C22.4587 20.8315 22.9755 21.3214 23.0213 21.9482C23.0331 22.1967 22.9926 22.5509 22.7371 22.8434L22.7312 22.8502L22.7254 22.8571C22.5287 23.0907 22.2619 23.2316 21.9521 23.2662ZM8.22003 23.2599C7.56946 23.2599 7.04022 22.7169 7.04022 22.0496C7.04022 21.3827 7.56946 20.8401 8.22003 20.8401C8.87061 20.8401 9.39984 21.3827 9.39984 22.0496C9.39984 22.7169 8.87061 23.2599 8.22003 23.2599Z" />
@@ -527,15 +524,15 @@
                     <p>Add to Cart</p>
                 </div>
             </a>
-            <a class="section_featured__content" href="single_page.html">
+            <a class="featured__content" href="single_page.html">
                 <img src="img/product3.jpg" alt="product1">
-                <h3 class="section_featured__title">MANGO PEOPLE T-SHIRT</h3>
-                <p class="section_featured__price">$52.00</p>
+                <h3 class="featured__title">MANGO PEOPLE T-SHIRT</h3>
+                <p class="featured__price">$52.00</p>
             </a>
         </div>
-        <div class="section_featured__item">
-            <a class="section_featured__item__cart" href="#">
-                <div class="section_featured__item__cart__add">
+        <div class="featured__item">
+            <a class="featured__cart" href="#">
+                <div class="featured__add">
                     <svg width="27" height="25" viewBox="0 0 27 25">
                         <path
                             d="M21.9521 23.2662H21.8397C21.2306 23.2662 20.7188 22.7666 20.6746 22.1289C20.6302 21.4602 21.1187 20.8781 21.7637 20.8341C21.7891 20.8324 21.8156 20.8315 21.8417 20.8315C22.4587 20.8315 22.9755 21.3214 23.0213 21.9482C23.0331 22.1967 22.9926 22.5509 22.7371 22.8434L22.7312 22.8502L22.7254 22.8571C22.5287 23.0907 22.2619 23.2316 21.9521 23.2662ZM8.22003 23.2599C7.56946 23.2599 7.04022 22.7169 7.04022 22.0496C7.04022 21.3827 7.56946 20.8401 8.22003 20.8401C8.87061 20.8401 9.39984 21.3827 9.39984 22.0496C9.39984 22.7169 8.87061 23.2599 8.22003 23.2599Z" />
@@ -547,15 +544,15 @@
                     <p>Add to Cart</p>
                 </div>
             </a>
-            <a class="section_featured__content" href="single_page.html">
+            <a class="featured__content" href="single_page.html">
                 <img src="img/product13.jpg" alt="product1">
-                <h3 class="section_featured__title">MANGO PEOPLE T-SHIRT</h3>
-                <p class="section_featured__price">$52.00</p>
+                <h3 class="featured__title">MANGO PEOPLE T-SHIRT</h3>
+                <p class="featured__price">$52.00</p>
             </a>
         </div>
-        <div class="section_featured__item">
-            <a class="section_featured__item__cart" href="#">
-                <div class="section_featured__item__cart__add">
+        <div class="featured__item">
+            <a class="featured__cart" href="#">
+                <div class="featured__add">
                     <svg width="27" height="25" viewBox="0 0 27 25">
                         <path
                             d="M21.9521 23.2662H21.8397C21.2306 23.2662 20.7188 22.7666 20.6746 22.1289C20.6302 21.4602 21.1187 20.8781 21.7637 20.8341C21.7891 20.8324 21.8156 20.8315 21.8417 20.8315C22.4587 20.8315 22.9755 21.3214 23.0213 21.9482C23.0331 22.1967 22.9926 22.5509 22.7371 22.8434L22.7312 22.8502L22.7254 22.8571C22.5287 23.0907 22.2619 23.2316 21.9521 23.2662ZM8.22003 23.2599C7.56946 23.2599 7.04022 22.7169 7.04022 22.0496C7.04022 21.3827 7.56946 20.8401 8.22003 20.8401C8.87061 20.8401 9.39984 21.3827 9.39984 22.0496C9.39984 22.7169 8.87061 23.2599 8.22003 23.2599Z" />
@@ -567,15 +564,15 @@
                     <p>Add to Cart</p>
                 </div>
             </a>
-            <a class="section_featured__content" href="single_page.html">
+            <a class="featured__content" href="single_page.html">
                 <img src="img/product8.jpg" alt="product1">
-                <h3 class="section_featured__title">MANGO PEOPLE T-SHIRT</h3>
-                <p class="section_featured__price">$52.00</p>
+                <h3 class="featured__title">MANGO PEOPLE T-SHIRT</h3>
+                <p class="featured__price">$52.00</p>
             </a>
         </div>
-        <div class="section_featured__item">
-            <a class="section_featured__item__cart" href="#">
-                <div class="section_featured__item__cart__add">
+        <div class="featured__item">
+            <a class="featured__cart" href="#">
+                <div class="featured__add">
                     <svg width="27" height="25" viewBox="0 0 27 25">
                         <path
                             d="M21.9521 23.2662H21.8397C21.2306 23.2662 20.7188 22.7666 20.6746 22.1289C20.6302 21.4602 21.1187 20.8781 21.7637 20.8341C21.7891 20.8324 21.8156 20.8315 21.8417 20.8315C22.4587 20.8315 22.9755 21.3214 23.0213 21.9482C23.0331 22.1967 22.9926 22.5509 22.7371 22.8434L22.7312 22.8502L22.7254 22.8571C22.5287 23.0907 22.2619 23.2316 21.9521 23.2662ZM8.22003 23.2599C7.56946 23.2599 7.04022 22.7169 7.04022 22.0496C7.04022 21.3827 7.56946 20.8401 8.22003 20.8401C8.87061 20.8401 9.39984 21.3827 9.39984 22.0496C9.39984 22.7169 8.87061 23.2599 8.22003 23.2599Z" />
@@ -587,15 +584,15 @@
                     <p>Add to Cart</p>
                 </div>
             </a>
-            <a class="section_featured__content" href="single_page.html">
+            <a class="featured__content" href="single_page.html">
                 <img src="img/product14.jpg" alt="product1">
-                <h3 class="section_featured__title">MANGO PEOPLE T-SHIRT</h3>
-                <p class="section_featured__price">$52.00</p>
+                <h3 class="featured__title">MANGO PEOPLE T-SHIRT</h3>
+                <p class="featured__price">$52.00</p>
             </a>
         </div>
-        <div class="section_featured__item">
-            <a class="section_featured__item__cart" href="#">
-                <div class="section_featured__item__cart__add">
+        <div class="featured__item">
+            <a class="featured__cart" href="#">
+                <div class="featured__add">
                     <svg width="27" height="25" viewBox="0 0 27 25">
                         <path
                             d="M21.9521 23.2662H21.8397C21.2306 23.2662 20.7188 22.7666 20.6746 22.1289C20.6302 21.4602 21.1187 20.8781 21.7637 20.8341C21.7891 20.8324 21.8156 20.8315 21.8417 20.8315C22.4587 20.8315 22.9755 21.3214 23.0213 21.9482C23.0331 22.1967 22.9926 22.5509 22.7371 22.8434L22.7312 22.8502L22.7254 22.8571C22.5287 23.0907 22.2619 23.2316 21.9521 23.2662ZM8.22003 23.2599C7.56946 23.2599 7.04022 22.7169 7.04022 22.0496C7.04022 21.3827 7.56946 20.8401 8.22003 20.8401C8.87061 20.8401 9.39984 21.3827 9.39984 22.0496C9.39984 22.7169 8.87061 23.2599 8.22003 23.2599Z" />
@@ -607,15 +604,15 @@
                     <p>Add to Cart</p>
                 </div>
             </a>
-            <a class="section_featured__content" href="single_page.html">
+            <a class="featured__content" href="single_page.html">
                 <img src="img/product6.jpg" alt="product1">
-                <h3 class="section_featured__title">MANGO PEOPLE T-SHIRT</h3>
-                <p class="section_featured__price">$52.00</p>
+                <h3 class="featured__title">MANGO PEOPLE T-SHIRT</h3>
+                <p class="featured__price">$52.00</p>
             </a>
         </div>
-        <div class="section_featured__item">
-            <a class="section_featured__item__cart" href="#">
-                <div class="section_featured__item__cart__add">
+        <div class="featured__item">
+            <a class="featured__cart" href="#">
+                <div class="featured__add">
                     <svg width="27" height="25" viewBox="0 0 27 25">
                         <path
                             d="M21.9521 23.2662H21.8397C21.2306 23.2662 20.7188 22.7666 20.6746 22.1289C20.6302 21.4602 21.1187 20.8781 21.7637 20.8341C21.7891 20.8324 21.8156 20.8315 21.8417 20.8315C22.4587 20.8315 22.9755 21.3214 23.0213 21.9482C23.0331 22.1967 22.9926 22.5509 22.7371 22.8434L22.7312 22.8502L22.7254 22.8571C22.5287 23.0907 22.2619 23.2316 21.9521 23.2662ZM8.22003 23.2599C7.56946 23.2599 7.04022 22.7169 7.04022 22.0496C7.04022 21.3827 7.56946 20.8401 8.22003 20.8401C8.87061 20.8401 9.39984 21.3827 9.39984 22.0496C9.39984 22.7169 8.87061 23.2599 8.22003 23.2599Z" />
@@ -627,15 +624,15 @@
                     <p>Add to Cart</p>
                 </div>
             </a>
-            <a class="section_featured__content" href="single_page.html">
+            <a class="featured__content" href="single_page.html">
                 <img src="img/product15.jpg" alt="product1">
-                <h3 class="section_featured__title">MANGO PEOPLE T-SHIRT</h3>
-                <p class="section_featured__price">$52.00</p>
+                <h3 class="featured__title">MANGO PEOPLE T-SHIRT</h3>
+                <p class="featured__price">$52.00</p>
             </a>
         </div>
-        <div class="section_featured__item">
-            <a class="section_featured__item__cart" href="#">
-                <div class="section_featured__item__cart__add">
+        <div class="featured__item">
+            <a class="featured__cart" href="#">
+                <div class="featured__add">
                     <svg width="27" height="25" viewBox="0 0 27 25">
                         <path
                             d="M21.9521 23.2662H21.8397C21.2306 23.2662 20.7188 22.7666 20.6746 22.1289C20.6302 21.4602 21.1187 20.8781 21.7637 20.8341C21.7891 20.8324 21.8156 20.8315 21.8417 20.8315C22.4587 20.8315 22.9755 21.3214 23.0213 21.9482C23.0331 22.1967 22.9926 22.5509 22.7371 22.8434L22.7312 22.8502L22.7254 22.8571C22.5287 23.0907 22.2619 23.2316 21.9521 23.2662ZM8.22003 23.2599C7.56946 23.2599 7.04022 22.7169 7.04022 22.0496C7.04022 21.3827 7.56946 20.8401 8.22003 20.8401C8.87061 20.8401 9.39984 21.3827 9.39984 22.0496C9.39984 22.7169 8.87061 23.2599 8.22003 23.2599Z" />
@@ -647,13 +644,13 @@
                     <p>Add to Cart</p>
                 </div>
             </a>
-            <a class="section_featured__content" href="single_page.html">
+            <a class="featured__content" href="single_page.html">
                 <img src="img/product16.jpg" alt="product1">
-                <h3 class="section_featured__title">MANGO PEOPLE T-SHIRT</h3>
-                <p class="section_featured__price">$52.00</p>
+                <h3 class="featured__title">MANGO PEOPLE T-SHIRT</h3>
+                <p class="featured__price">$52.00</p>
             </a>
         </div>
-        <div class="product-box__footer product-box__footsort">
+        <div class="product-box__footer product-box_footsort">
             <nav class="product-box__pages">
                 <a class="product-box__page" href="#">&lt</a>
                 <a class="product-box__page" href="#">1</a>
@@ -667,95 +664,93 @@
             </nav>
             <a class="product-box__btn" href="#">View All</a>
         </div>
-    </section>
-    <section class="benefit center">
-        <article class="benefit_item">
+    </main>
+    <section class="benefit-mini center">
+        <article class="benefit-mini__item">
             <img src="img/Forma1.svg" height="40" alt="delivery">
-            <h3 class="section_benefit__title">Free Delivery</h3>
-            <p class="benefit_text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+            <h3 class="benefit__subtitle">Free Delivery</h3>
+            <p class="benefit-mini__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
                 with
                 extensive models.</p>
         </article>
-        <article class="benefit_item">
+        <article class="benefit-mini__item">
             <img src="img/Forma2.svg" height="40" alt="discounts">
-            <h3 class="section_benefit__title">Sales & discounts</h3>
-            <p class="benefit_text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+            <h3 class="benefit__subtitle">Sales & discounts</h3>
+            <p class="benefit-mini__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
                 with
                 extensive models.</p>
         </article>
-        <article class="benefit_item">
+        <article class="benefit-mini__item">
             <img src="img/Forma3.svg" height="40" alt="assurance">
-            <h3 class="section_benefit__title">Quality assurance</h3>
-            <p class="benefit_text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+            <h3 class="benefit__subtitle">Quality assurance</h3>
+            <p class="benefit-mini__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
                 with
                 extensive models.</p>
         </article>
     </section>
-    <aside class="section_subscribe subscribe_back section_subscribe__margin center">
-        <figure class="subscribe_intersect">
-            <img class="subscribe_intersect__img" src="img/Intersect.png" alt="Intersect">
-            <figcaption class="subscribe_intersect__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+    <section class="subscribe subscribe_image subscribe_margin center">
+        <figure class="subscribe__intersect">
+            <img src="img/Intersect.png" alt="intersect">
+            <figcaption class="subscribe__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
                 a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
                 <div>
-                    <p class="subscribe_intersect__name">Bin Burhan</p>
-                    <p class="subscribe_intersect__place">Dhaka, Bd</p>
+                    <p class="subscribe__name">Bin Burhan</p>
+                    <p class="subscribe__place">Dhaka, Bd</p>
                 </div>
             </figcaption>
         </figure>
-        <div class="subscribe_subscribe">
-            <h3 class="subscribe_subscribe__title">SUBSCRIBE</h3>
-            <p class="subscribe_subscribe__subtitle">FOR OUR NEWLETTER AND PROMOTION</p>
-            <form class="subscribe_subscribe__label" action="#">
+        <div class="subscribe__form">
+            <h3 class="subscribe__title">SUBSCRIBE</h3>
+            <p class="subscribe__subtitle">FOR OUR NEWLETTER AND PROMOTION</p>
+            <form class="subscribe__label" action="#">
                 <label for="email"></label>
-                <input class="subscribe_subscribe__input" placeholder="Enter Your Email" id="email" type="email">
-                <button class="subscribe_subscribe__btn">Subscribe</button>
+                <input class="subscribe__input" placeholder="Enter Your Email" id="email" type="email">
+                <button class="subscribe__btn">Subscribe</button>
             </form>
         </div>
-    </aside>
-    <section class="section_info center">
-        <figure class="section_info__about">
-            <div class="header_page__logo" href="index.html">
+    </section>
+    <section class="info center">
+        <div class="info__about">
+            <div class="logo">
                 <img src="./img/logo.png" alt="logo">
-                <h1 class="header_page__logo__title">
-                    BRAN<span class="header_page__logo__title_d">D</span>
-                </h1>
+                <h2>BRAN<span>D</span></h2>
             </div>
-            <figcaption class="section_info__about__text">
+            <p class="info__desc">
                 Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
                 multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of
                 processes and cross-unit partnerships.<br><br>
                 Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior
                 initiatives for wireless technologies. Dynamically optimize.
-            </figcaption>
-        </figure>
-        <nav class="section_info__nav">
-            <h3 class="section_info__nav__title">COMPANY</h3>
-            <div class="section_info__nav__menu">
-                <a class="section_info__nav__menu__text" href="#">Home</a>
-                <a class="section_info__nav__menu__text" href="#">Shop</a>
-                <a class="section_info__nav__menu__text" href="#">About</a>
-                <a class="section_info__nav__menu__text" href="#">How It Works</a>
-                <a class="section_info__nav__menu__text" href="#">Contact</a>
+            </p>
+        </div>
+        <nav class="info__nav">
+            <h3 class="info__title">COMPANY</h3>
+            <div class="info__menu">
+                <a class="info__text" href="#">Home</a>
+                <a class="info__text" href="#">Shop</a>
+                <a class="info__text" href="#">About</a>
+                <a class="info__text" href="#">How It Works</a>
+                <a class="info__text" href="#">Contact</a>
             </div>
         </nav>
-        <nav class="section_info__nav">
-            <h3 class="section_info__nav__title">INFORMATION</h3>
-            <div class="section_info__nav__menu">
-                <a class="section_info__nav__menu__text" href="#">Tearms & Condition</a>
-                <a class="section_info__nav__menu__text" href="#">Privacy Policy</a>
-                <a class="section_info__nav__menu__text" href="#">How to Buy</a>
-                <a class="section_info__nav__menu__text" href="#">How to Sell</a>
-                <a class="section_info__nav__menu__text" href="#">Promotion</a>
+        <nav class="info__nav">
+            <h3 class="info__title">INFORMATION</h3>
+            <div class="info__menu">
+                <a class="info__text" href="#">Tearms & Condition</a>
+                <a class="info__text" href="#">Privacy Policy</a>
+                <a class="info__text" href="#">How to Buy</a>
+                <a class="info__text" href="#">How to Sell</a>
+                <a class="info__text" href="#">Promotion</a>
             </div>
         </nav>
-        <nav class="section_info__nav">
-            <h3 class="section_info__nav__title">SHOP CATEGORY</h3>
-            <div class="section_info__nav__menu">
-                <a class="section_info__nav__menu__text" href="#">Men</a>
-                <a class="section_info__nav__menu__text" href="#">Women</a>
-                <a class="section_info__nav__menu__text" href="#">Child</a>
-                <a class="section_info__nav__menu__text" href="#">Apparel</a>
-                <a class="section_info__nav__menu__text" href="#">Brows All</a>
+        <nav class="info__nav">
+            <h3 class="info__title">SHOP CATEGORY</h3>
+            <div class="info__menu">
+                <a class="info__text" href="#">Men</a>
+                <a class="info__text" href="#">Women</a>
+                <a class="info__text" href="#">Child</a>
+                <a class="info__text" href="#">Apparel</a>
+                <a class="info__text" href="#">Brows All</a>
             </div>
         </nav>
     </section>
