@@ -273,6 +273,8 @@ summary
     &__delete
         fill: #c0c0c0
         transition: fill 0.4s
+        align-self: center
+        margin: 0 auto
 
         &:hover
             fill: $colorBasic
@@ -1039,6 +1041,147 @@ summary
             background-color: $colorBasic
             border: 1px solid #fff
 
+/* страница покупки карточек */
+.shopping
+    margin-top: 70px
+
+    &__carts
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-template-rows: repeat(3, auto)
+        gap: 10px
+
+    &__cart
+        display: flex
+        gap: 20px
+        padding-top: 10px
+        padding-bottom: 10px
+
+        & img
+            height: 115px
+
+    &__separator
+        grid-column: span 6
+        height: 1px
+        background-color: #eaeaea
+
+    &__content
+        display: flex
+        flex-direction: column
+        gap: 37px
+        width: 330px
+        padding-top: 13px
+        padding-bottom: 13px
+
+    &__name
+        @include fontMix(#222, 13px, 1.2, 400)
+
+    &__color-size
+        @include fontMix(#575757, 13px, 20px, 400)
+
+        & span
+            font-weight: 300
+            color: #6f6e6e
+
+    & input, select
+        height: 45px
+        background-color: #ffffff
+        border: 1px solid #eaeaea
+        padding-left: 17px
+        padding-right: 17px
+
+    & select
+        color: #b1b1b1
+
+    &__column,
+    &__cell
+        text-align: center
+        align-self: center
+
+    &__column
+        @include fontMix(black, 13px, 20px, 700)
+        letter-spacing: -0.015em
+        padding-top: 10px
+        padding-bottom: 10px
+
+        &_first
+            text-align: start
+
+    &__cell
+        font-weight: 400
+        color: #656565
+
+    &__quantitu
+        width: 60px
+        height: 30px
+        border: 1px solid #eaeaea
+        align-self: center
+        margin: 0 auto
+        color: #656565
+
+    &__submit
+        margin-top: 45px
+        display: flex
+        justify-content: space-between
+
+    &__checkout
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        margin-top: 60px
+        gap: 30px
+
+    &__label
+        @include fontMix(black, 16px, 1.2, 700)
+
+    &__desc
+        @include fontMix(black, 14px, 1.2, 300)
+
+    &__form
+        border: none
+        display: flex
+        flex-direction: column
+        gap: 20px
+
+    &__total
+        padding: 41px 43px
+        background-color: #f5f3f3
+        max-height: 215px
+
+    &__text
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        gap: 14px
+        padding-bottom: 20px
+        margin-bottom: 18px
+        border-bottom: 1px solid #e2e2e2
+
+    &__subtitle
+        @include fontMix(#4a4a4a, 11px, normal, 400)
+
+        & span
+            margin-left: 18px
+
+    &__title
+        @include fontMix(black, 16px, normal, 700)
+
+        & span
+            margin-left: 18px
+            color: $colorBasic
+
+    &__button
+        width: 100%
+        height: 50px
+        background-color: $colorBasic
+        border: 1px solid #fff
+        @include fontMix(white, 16px, normal, 700)
+        transition: color 0.4s, backround-color 0.4s, border 0.4s
+
+        &:hover
+            color: $colorBasic
+            background-color: white
+            border: 1px solid $colorBasic
+
 /* раздел оформление */
 .checkout
     margin-top: 50px
@@ -1126,19 +1269,32 @@ summary
         &:hover
             color: $colorBasic
 
-    &__btn
-        margin-top: 30px
-        width: 180px
-        height: 50px
-        cursor: pointer
-        background-color: #ffffff
-        border: 1px solid #eaeaea
-        @include fontMix(#4a4a4a, 14px, 1.2, 700)
-        transition: border 0.4s, border-color 0.4s, color 0.4s
+.button-gray
+    height: 50px
+    width: 180px
+    cursor: pointer
+    background-color: #ffffff
+    border: 1px solid #eaeaea
+    @include fontMix(#4a4a4a, 14px, 1.2, 700)
+    transition: border 0.4s, border-color 0.4s, color 0.4s
 
-        &:hover
-            color: #FFF
-            background-color: #4a4a4a
+    &:hover
+        color: #FFF
+        background-color: #4a4a4a
+
+    &_margin
+        margin-top: 30px
+
+    &_width
+        width: 230px
+
+    &_ship
+        width: 110px
+        font-size: 11px
+
+    &_count
+        width: 130px
+        font-size: 11px
 
 /* раздел подпишись */
 .subscribe

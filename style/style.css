@@ -315,6 +315,8 @@ summary::before {
 .pay__delete {
   fill: #c0c0c0;
   transition: fill 0.4s;
+  align-self: center;
+  margin: 0 auto;
 }
 .pay__delete:hover {
   fill: #f16d7f;
@@ -1205,6 +1207,171 @@ summary::before {
   border: 1px solid #fff;
 }
 
+/* страница покупки карточек */
+.shopping {
+  margin-top: 70px;
+}
+.shopping__carts {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+}
+.shopping__cart {
+  display: flex;
+  gap: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.shopping__cart img {
+  height: 115px;
+}
+.shopping__separator {
+  grid-column: span 6;
+  height: 1px;
+  background-color: #eaeaea;
+}
+.shopping__content {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  width: 330px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.shopping__name {
+  color: #222;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.shopping__color-size {
+  color: #575757;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.shopping__color-size span {
+  font-weight: 300;
+  color: #6f6e6e;
+}
+.shopping input, .shopping select {
+  height: 45px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.shopping select {
+  color: #b1b1b1;
+}
+.shopping__column, .shopping__cell {
+  text-align: center;
+  align-self: center;
+}
+.shopping__column {
+  color: black;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.shopping__column_first {
+  text-align: start;
+}
+.shopping__cell {
+  font-weight: 400;
+  color: #656565;
+}
+.shopping__quantitu {
+  width: 60px;
+  height: 30px;
+  border: 1px solid #eaeaea;
+  align-self: center;
+  margin: 0 auto;
+  color: #656565;
+}
+.shopping__submit {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.shopping__checkout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 60px;
+  gap: 30px;
+}
+.shopping__label {
+  color: black;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.shopping__desc {
+  color: black;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+}
+.shopping__form {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.shopping__total {
+  padding: 41px 43px;
+  background-color: #f5f3f3;
+  max-height: 215px;
+}
+.shopping__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  padding-bottom: 20px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.shopping__subtitle {
+  color: #4a4a4a;
+  font-size: 11px;
+  line-height: normal;
+  font-weight: 400;
+}
+.shopping__subtitle span {
+  margin-left: 18px;
+}
+.shopping__title {
+  color: black;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 700;
+}
+.shopping__title span {
+  margin-left: 18px;
+  color: #f16d7f;
+}
+.shopping__button {
+  width: 100%;
+  height: 50px;
+  background-color: #f16d7f;
+  border: 1px solid #fff;
+  color: white;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 700;
+  transition: color 0.4s, backround-color 0.4s, border 0.4s;
+}
+.shopping__button:hover {
+  color: #f16d7f;
+  background-color: white;
+  border: 1px solid #f16d7f;
+}
+
 /* раздел оформление */
 .checkout {
   margin-top: 50px;
@@ -1316,10 +1483,10 @@ summary::before {
 .checkout__forgot:hover {
   color: #f16d7f;
 }
-.checkout__btn {
-  margin-top: 30px;
-  width: 180px;
+
+.button-gray {
   height: 50px;
+  width: 180px;
   cursor: pointer;
   background-color: #ffffff;
   border: 1px solid #eaeaea;
@@ -1329,9 +1496,23 @@ summary::before {
   font-weight: 700;
   transition: border 0.4s, border-color 0.4s, color 0.4s;
 }
-.checkout__btn:hover {
+.button-gray:hover {
   color: #FFF;
   background-color: #4a4a4a;
+}
+.button-gray_margin {
+  margin-top: 30px;
+}
+.button-gray_width {
+  width: 230px;
+}
+.button-gray_ship {
+  width: 110px;
+  font-size: 11px;
+}
+.button-gray_count {
+  width: 130px;
+  font-size: 11px;
 }
 
 /* раздел подпишись */
