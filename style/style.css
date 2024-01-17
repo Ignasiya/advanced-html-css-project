@@ -47,6 +47,41 @@ summary::before {
   padding-right: calc(50% - 570px);
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f16d7f;
+  padding: 0.7rem 1rem;
+  height: 38px;
+  border: 1px solid #FFF;
+  color: white;
+  font-size: 14px;
+  line-height: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  transition: color 0.4s, border-color 0.4s, background-color 0.4s;
+}
+.button:hover {
+  background-color: #FFF;
+  color: #f16d7f;
+  border: 1px solid #f16d7f;
+}
+.button_gray {
+  height: 50px;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #eaeaea;
+  color: #4a4a4a;
+  font-weight: 700;
+}
+.button_hover-gray:hover {
+  color: #FFF;
+  background-color: #4a4a4a;
+  border-color: #4a4a4a;
+}
+
 /* шапка сайта */
 .header {
   padding-bottom: 24px;
@@ -62,29 +97,23 @@ summary::before {
 }
 .header__forminput {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
-.header__browse {
-  display: block;
+.header__button-browse {
   position: relative;
   z-index: 1;
-  padding: 10px;
   color: #838383;
-  font-size: 14px;
-  line-height: normal;
-  font-weight: 300;
-  width: 87px;
-  height: 38px;
+  width: 100px;
   background-color: #f9f9f9;
-  border: 1px solid #e6e6e6;
+  border-color: #e6e6e6;
   border-radius: 3px 0px 0px 3px;
   transition: color 0.4s, background-color 0.4s;
 }
-.header__browse[open] {
+.header__button-browse[open] {
   background-color: #f16d7f;
   color: #FFF;
 }
-.header__browse:hover {
+.header__button-browse_hover-browse:hover {
   background-color: #f16d7f;
   color: #FFF;
 }
@@ -102,20 +131,15 @@ summary::before {
   margin-left: -1px;
   margin-right: -1px;
 }
-.header__search {
+.header__button-search {
   background-color: #fff;
   width: 38px;
-  height: 38px;
+  padding: 0.5rem;
   border-radius: 0px 3px 3px 0px;
-  border: 1px solid #e6e6e6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  border-color: #e6e6e6;
   fill: #a4a4a4;
-  transition: color 0.4s, background-color 0.4s;
 }
-.header__search:hover {
+.header__button-search_hover-search:hover {
   background-color: #f16d7f;
   fill: #fff;
 }
@@ -135,7 +159,7 @@ summary::before {
   content: "▲";
   display: block;
   top: -12px;
-  left: 72px;
+  left: 79px;
   position: absolute;
   color: white;
 }
@@ -169,33 +193,18 @@ summary::before {
   align-items: center;
   gap: 26px;
 }
-.header__cart {
+.header__basket {
   fill: #222;
   transition: fill 0.4s;
 }
-.header__cart:hover {
+.header__basket:hover {
   fill: #f16d7f;
 }
-.header__myaccount {
-  display: block;
-  position: relative;
+.header__button {
   width: 130px;
-  height: 38px;
-  background-color: #f16d7f;
-  padding: 10px 15px;
-  color: #FFF;
-  border: 1px solid #FFF;
-  transition: color 0.4s, border-color 0.4s, background-color 0.4s;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.025em;
+  position: relative;
 }
-.header__myaccount[open] {
-  background-color: #FFF;
-  color: #f16d7f;
-  border: 1px solid #f16d7f;
-}
-.header__myaccount:hover {
+.header__button[open] {
   background-color: #FFF;
   color: #f16d7f;
   border: 1px solid #f16d7f;
@@ -656,27 +665,12 @@ summary::before {
   display: flex;
   justify-content: center;
 }
-.featured__btn {
+.featured__button {
   margin-top: 48px;
   width: 212px;
   height: 48px;
-  background-color: #f16d7f;
-  color: white;
   font-size: 16px;
-  line-height: normal;
   font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 18px;
-  border: 1px solid #FFF;
-  letter-spacing: 0.025em;
-  transition: background-color 0.4s, color 0.4s, border 0.4s;
-}
-.featured__btn:hover {
-  background-color: #FFF;
-  color: #f16d7f;
-  border: 1px solid #f16d7f;
 }
 
 /* раздел навигации */
@@ -860,23 +854,17 @@ summary::before {
 .product-box__page:hover {
   color: #f16d7f;
 }
-.product-box__btn {
+.product-box__button {
   width: 150px;
   height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: white;
   color: #f16d7f;
   font-size: 16px;
   line-height: normal;
   font-weight: 700;
-  padding: 15px 18px;
-  border: 1px solid #f16d7f;
-  letter-spacing: 0.025em;
-  transition: color 0.4s, background-color 0.4s, border 0.4s;
+  border-color: #f16d7f;
 }
-.product-box__btn:hover {
+.product-box__button_hover-product:hover {
   background-color: #f16d7f;
   color: white;
   border: 1px solid white;
@@ -1184,23 +1172,19 @@ summary::before {
      -moz-user-select: none;
           user-select: none;
 }
-.description__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.description__button {
   gap: 15px;
   fill: #f16d7f;
   color: #f16d7f;
   font-size: 16px;
-  line-height: 1.2;
   font-weight: 700;
-  border: 1px solid #f16d7f;
+  border-color: #f16d7f;
   width: 530px;
   height: 55px;
   background-color: #ffffff;
-  transition: color 0.4s, fill 0.4s, border 0.4s, background-color 0.4s;
+  transition: color 0.4s, border-color 0.4s, background-color 0.4s, fill 0.4s;
 }
-.description__btn:hover {
+.description__button_hover-desc:hover {
   fill: #fff;
   color: #fff;
   background-color: #f16d7f;
@@ -1356,20 +1340,17 @@ summary::before {
   color: #f16d7f;
 }
 .shopping__button {
+  width: 230px;
+}
+.shopping__button_mini {
+  width: 125px;
+  font-size: 11px;
+}
+.shopping__button-checkout {
   width: 100%;
   height: 50px;
-  background-color: #f16d7f;
-  border: 1px solid #fff;
-  color: white;
   font-size: 16px;
-  line-height: normal;
   font-weight: 700;
-  transition: color 0.4s, backround-color 0.4s, border 0.4s;
-}
-.shopping__button:hover {
-  color: #f16d7f;
-  background-color: white;
-  border: 1px solid #f16d7f;
 }
 
 /* раздел оформление */
@@ -1483,36 +1464,8 @@ summary::before {
 .checkout__forgot:hover {
   color: #f16d7f;
 }
-
-.button-gray {
-  height: 50px;
-  width: 180px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid #eaeaea;
-  color: #4a4a4a;
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 700;
-  transition: border 0.4s, border-color 0.4s, color 0.4s;
-}
-.button-gray:hover {
-  color: #FFF;
-  background-color: #4a4a4a;
-}
-.button-gray_margin {
+.checkout__button {
   margin-top: 30px;
-}
-.button-gray_width {
-  width: 230px;
-}
-.button-gray_ship {
-  width: 110px;
-  font-size: 11px;
-}
-.button-gray_count {
-  width: 130px;
-  font-size: 11px;
 }
 
 /* раздел подпишись */
@@ -1609,23 +1562,11 @@ summary::before {
   font-weight: 400;
   letter-spacing: 0.025em;
 }
-.subscribe__btn {
+.subscribe__button {
   width: 100px;
   height: 50px;
-  background-color: #f16d7f;
   border: none;
   border-radius: 0 30px 30px 0;
-  color: white;
-  font-size: 14px;
-  line-height: normal;
-  font-weight: 400;
-  text-align: center;
-  transition: color 0.4s, background-color 0.4s, border 0.4s;
-}
-.subscribe__btn:hover {
-  background-color: #FFF;
-  color: #f16d7f;
-  border: 1px solid #f16d7f;
 }
 
 /* информация сайта */

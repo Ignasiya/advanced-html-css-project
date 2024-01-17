@@ -40,6 +40,37 @@ summary
     padding-left: calc(50% - $widthSite / 2)
     padding-right: calc(50% - $widthSite / 2)
 
+.button
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $colorBasic
+    padding: 0.7rem 1rem
+    height: 38px
+    border: 1px solid #FFF
+    @include fontMix(white, 14px, 1rem, 400)
+    letter-spacing: 0.025em
+    cursor: pointer
+    transition: color 0.4s, border-color 0.4s, background-color 0.4s
+
+    &:hover
+        background-color: #FFF
+        color: $colorBasic
+        border: 1px solid $colorBasic
+
+    &_gray
+        height: 50px
+        width: 180px
+        background-color: #ffffff
+        border-color: #eaeaea
+        color: #4a4a4a
+        font-weight: 700
+
+    &_hover-gray:hover
+        color: #FFF
+        background-color: #4a4a4a
+        border-color: #4a4a4a
+
 /* шапка сайта */
 .header
     padding-bottom: 24px
@@ -55,18 +86,15 @@ summary
 
     &__forminput
         display: flex
-        align-items: center
+        align-items: flex-end
 
-    &__browse
-        display: block
+    &__button-browse
         position: relative
         z-index: 1
-        padding: 10px
-        @include fontMix(#838383, 14px, normal, 300)
-        width: 87px
-        height: 38px
+        color: #838383
+        width: 100px
         background-color: #f9f9f9
-        border: 1px solid #e6e6e6
+        border-color: #e6e6e6
         border-radius: 3px 0px 0px 3px
         transition: color 0.4s, background-color 0.4s
 
@@ -74,7 +102,7 @@ summary
             background-color: $colorBasic
             color: #FFF
 
-        &:hover
+        &_hover-browse:hover
             background-color: $colorBasic
             color: #FFF
 
@@ -89,20 +117,15 @@ summary
         margin-left: -1px
         margin-right: -1px
 
-    &__search
+    &__button-search
         background-color: #fff
         width: 38px
-        height: 38px
+        padding: 0.5rem
         border-radius: 0px 3px 3px 0px
-        border: 1px solid #e6e6e6
-        display: flex
-        justify-content: center
-        align-items: center
-        cursor: pointer
+        border-color: #e6e6e6
         fill: #a4a4a4
-        transition: color 0.4s, background-color 0.4s
 
-        &:hover
+        &_hover-search:hover
             background-color: $colorBasic
             fill: #fff
 
@@ -122,7 +145,7 @@ summary
             content: '\25B2'
             display: block
             top: -12px
-            left: 72px
+            left: 79px
             position: absolute
             color: white
 
@@ -150,33 +173,18 @@ summary
         align-items: center
         gap: 26px
 
-    &__cart
+    &__basket
         fill: #222
         transition: fill 0.4s
 
         &:hover
             fill: $colorBasic
 
-    &__myaccount
-        display: block
-        position: relative
+    &__button
         width: 130px
-        height: 38px
-        background-color: $colorBasic
-        padding: 10px 15px
-        color: #FFF
-        border: 1px solid #FFF
-        transition: color 0.4s, border-color 0.4s, background-color 0.4s
-        font-size: 14px
-        font-weight: 400
-        letter-spacing: 0.025em
+        position: relative
 
         &[open]
-            background-color: #FFF
-            color: $colorBasic
-            border: 1px solid $colorBasic
-
-        &:hover
             background-color: #FFF
             color: $colorBasic
             border: 1px solid $colorBasic
@@ -575,24 +583,12 @@ summary
         display: flex
         justify-content: center
 
-    &__btn
+    &__button
         margin-top: 48px
         width: 212px
         height: 48px
-        background-color: $colorBasic
-        @include fontMix(white, 16px, normal, 700)
-        display: flex
-        justify-content: center
-        align-items: center
-        padding: 15px 18px
-        border: 1px solid #FFF
-        letter-spacing: 0.025em
-        transition: background-color 0.4s, color 0.4s, border 0.4s
-
-        &:hover
-            background-color: #FFF
-            color: $colorBasic
-            border: 1px solid $colorBasic
+        font-size: 16px
+        font-weight: 700
 
 /* раздел навигации */
 .top-head
@@ -751,20 +747,14 @@ summary
         &:hover
             color: $colorBasic
 
-    &__btn
+    &__button
         width: 150px
         height: 44px
-        display: flex
-        justify-content: center
-        align-items: center
         background-color: white
         @include fontMix($colorBasic, 16px, normal, 700)
-        padding: 15px 18px
-        border: 1px solid $colorBasic
-        letter-spacing: 0.025em
-        transition: color 0.4s, background-color 0.4s, border 0.4s
+        border-color: $colorBasic
 
-        &:hover
+        &_hover-product:hover
             background-color: $colorBasic
             color: white
             border: 1px solid white
@@ -1022,20 +1012,19 @@ summary
         padding: 0px 17px
         user-select: none
 
-    &__btn
-        display: flex
-        align-items: center
-        justify-content: center
+    &__button
         gap: 15px
         fill: $colorBasic
-        @include fontMix($colorBasic, 16px, 1.2, 700)
-        border: 1px solid $colorBasic
+        color: $colorBasic
+        font-size: 16px
+        font-weight: 700
+        border-color: $colorBasic
         width: 530px
         height: 55px
         background-color: #ffffff
-        transition: color 0.4s, fill 0.4s, border 0.4s, background-color 0.4s
+        transition: color 0.4s, border-color 0.4s, background-color 0.4s,fill 0.4s
 
-        &:hover
+        &_hover-desc:hover
             fill: #fff
             color: #fff
             background-color: $colorBasic
@@ -1170,17 +1159,16 @@ summary
             color: $colorBasic
 
     &__button
+        width: 230px
+        &_mini
+            width: 125px
+            font-size: 11px
+
+    &__button-checkout
         width: 100%
         height: 50px
-        background-color: $colorBasic
-        border: 1px solid #fff
-        @include fontMix(white, 16px, normal, 700)
-        transition: color 0.4s, backround-color 0.4s, border 0.4s
-
-        &:hover
-            color: $colorBasic
-            background-color: white
-            border: 1px solid $colorBasic
+        font-size: 16px
+        font-weight: 700
 
 /* раздел оформление */
 .checkout
@@ -1269,32 +1257,8 @@ summary
         &:hover
             color: $colorBasic
 
-.button-gray
-    height: 50px
-    width: 180px
-    cursor: pointer
-    background-color: #ffffff
-    border: 1px solid #eaeaea
-    @include fontMix(#4a4a4a, 14px, 1.2, 700)
-    transition: border 0.4s, border-color 0.4s, color 0.4s
-
-    &:hover
-        color: #FFF
-        background-color: #4a4a4a
-
-    &_margin
+    &__button
         margin-top: 30px
-
-    &_width
-        width: 230px
-
-    &_ship
-        width: 110px
-        font-size: 11px
-
-    &_count
-        width: 130px
-        font-size: 11px
 
 /* раздел подпишись */
 .subscribe
@@ -1372,20 +1336,11 @@ summary
         @include fontMix(black, 14px, normal, 400)
         letter-spacing: 0.025em
 
-    &__btn
+    &__button
         width: 100px
         height: 50px
-        background-color: $colorBasic
         border: none
         border-radius: 0 30px 30px 0
-        @include fontMix(white, 14px, normal, 400)
-        text-align: center
-        transition: color 0.4s, background-color 0.4s, border 0.4s
-
-        &:hover
-            background-color: #FFF
-            color: $colorBasic
-            border: 1px solid $colorBasic
 
 /* информация сайта */
 .info
