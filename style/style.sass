@@ -608,6 +608,7 @@ summary
 
     &__link
         @include fontMix(#636363, 14px, 17px, 300)
+        transition: color 0.4s
 
         &_site
             font-weight: 700
@@ -620,6 +621,9 @@ summary
 
         &:last-child::after
             content: none
+
+        &:hover
+            color: $colorBasic
 
 /* раздел каталог */
 .product-box
@@ -1045,6 +1049,7 @@ summary
         gap: 20px
         padding-top: 10px
         padding-bottom: 10px
+        cursor: pointer
 
         & img
             height: 115px

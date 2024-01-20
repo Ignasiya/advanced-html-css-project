@@ -698,6 +698,7 @@ summary::before {
   font-size: 14px;
   line-height: 17px;
   font-weight: 300;
+  transition: color 0.4s;
 }
 .breadcrumbs__link_site {
   font-weight: 700;
@@ -710,6 +711,9 @@ summary::before {
 }
 .breadcrumbs__link:last-child::after {
   content: none;
+}
+.breadcrumbs__link:hover {
+  color: #f16d7f;
 }
 
 /* раздел каталог */
@@ -1206,6 +1210,7 @@ summary::before {
   gap: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 .shopping__cart img {
   height: 115px;
